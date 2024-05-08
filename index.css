@@ -1,0 +1,618 @@
+body {
+
+    /* background-color: #b3d9ff; Fallback color if gradients are not supported */
+     background-image: linear-gradient(180deg, hsl(215, 94%, 82%), hsl(200, 99%, 71%), hsl(200, 55%, 57%), hsl(200, 34%, 23%));
+     /*Gradient for modern browsers */
+    color: #fff; /* Text color */
+    /* display: none; */
+
+    /* background-image: url('assets/wp7991751-4k-weather-wallpapers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff; */
+}
+
+.appbackground {
+    width: 100vw;
+    height: 100vh;
+    /* Add any other styling properties you need */
+}
+
+.logo-container {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  left: 20px;
+}
+
+.outer-box {
+  width: 102px;
+  height: 38px;
+  border: 1.5px solid #fff;
+  border-right: none;
+  border-top: none;
+  border-radius: 4px;
+}
+
+.outer-box::before {
+  content: "";
+  position: absolute;
+  bottom: 96.9px;
+  right: 23%;
+  width: 78px;
+  height: 1px;
+  border-top: 1.5px solid #fff;
+  border-top-left-radius: 5px;
+}
+
+.outer-box::after {
+  content: "";
+  position: absolute;
+  top: 21%;
+  right: -0.5px; /* Adjust this value to control the size of the opening */
+  width: 0px;
+  height: 17px;
+  border-right: 1.5px solid #fff;
+  border-bottom-right-radius: 5px;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  justify-content: center;
+  top: -21%;
+  left: 78%;
+}
+
+#logo {
+  position: relative;
+  margin: 4px;
+  
+}
+
+.logoname {
+  position: relative;
+  display: inline-block;
+  top: -59.3px;
+  left: 8px;
+}
+
+.sphere {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  top: 16px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: inherit;
+}
+
+.navbar {
+  position: sticky;
+    background-color: transparent !important;
+    padding: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar label {
+    margin-right: 10px;
+}
+
+.navbar input[type="text"],
+.navbar input[type="text"]:focus {
+    background-color: transparent !important;
+    color: #fff;
+    width: 40%;
+    padding: 5px;
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #fff; /* Add bottom border */
+    margin-left: 17.2%;
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Placeholder text font size */
+    
+}
+
+.navbar input[type="text"]::placeholder {
+    color: #ccc; /* Placeholder text color */
+}
+
+/* Prevent input background from changing to white */
+.navbar input[type="text"]:-webkit-autofill,
+.navbar input[type="text"]:-webkit-autofill:focus {
+    align-items: center;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important; /* Set text color to white */
+}
+
+
+
+.navbar button {
+    position: absolute; /* Position the button relative to the navbar container */
+    right: 40.6%; /* Align the button to the right */
+    transform: translateY(-10%); /* Adjust vertical position */
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Increase the size of the button icon */
+.navbar button .material-symbols-outlined {
+    font-size: 25px !important; /* Adjust the font size as needed */
+    font-weight: 100;
+}
+
+.toggle {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+}
+
+.temperature-toggle span, .toggle span, .toggle p {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  line-height: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.temperature-toggle {
+  position: relative;
+  text-align: center;
+  background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+  border-radius: 5px;
+  left: 60px;
+}
+
+.togglebox {
+  position: relative;
+  text-align: center;
+  background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+  border-radius: 5px;
+  left: 120px;
+}
+
+.toggle p {
+  position: relative;
+  left: 90px;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 50%; /* To make it round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 160px;
+  cursor: pointer;
+}
+
+.profile span {
+  position: absolute;
+  font-size: 40px; /* Adjust the size as needed */
+  font-weight: 250;
+  margin: 0;
+}
+
+.locationname {
+  position: absolute;
+  display: inline-block;
+  align-items: center; /* Align items vertically */
+  margin: -80px 0px 0 -20px;
+}
+
+.toggletwo {
+    position: absolute;
+    display: inline-block;
+    align-items: center; /* Align items vertically */
+    background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+    border-radius: 5px;
+    margin: 20px 0px 0 -20px;
+}
+
+
+.toggletwo span {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.temperature-toggle span,
+.toggle span,
+.toggletwo span {
+    cursor: pointer;
+}
+
+.temperature-toggle span::after,  .active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px; /* Adjust the position as needed */
+    width: 1px;
+    height: 70%;
+    background-color: #ccc;
+    transform: translateY(-50%);
+}
+
+.temperature-toggle span:last-child::after, .toggletwo span:last-child::after, .toggle span:last-child::after {
+    display: none; /* Hide the line after the last span */
+}
+
+
+
+/* General info styles */
+
+.today-weather-info {
+    display: flex;
+    width: 90%;
+    margin: 5%  9.3% 5%  9.3%;
+
+}
+
+.weather-dayinfo {
+    width: 250px;
+    padding: 10px;
+}
+
+.todayndate  {
+    display: flex;
+ 
+}
+
+.location-details {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.material-symbols-outlined {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.location-details h4:not(:last-child) {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.nownext12hoursinfo {
+    width: 61.15%;
+    display: flex;
+    position: absolute;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-left: 380px; /* Adjust the spacing between each regenerated next hour */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    left: 0; /* Position the container at the left edge */
+    right: 0; /* Expand the container to the full width of the parent */
+
+}
+
+.nownext12hoursinfo > * {
+    margin-left: 25.1px; /* Adjust the spacing between each regenerated next hour */
+    margin-top: 70px;
+    align-items: center; /* Center the entire content vertically */
+}
+
+.nownext12hoursinfo::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+
+/* .timeInformation  > * { */
+    .timeInformation {
+    background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+    padding: 10px; /* Adjust the padding as needed */
+    border-radius: 20px; /* Rounded corners for the box */
+    border: 1px solid rgba(32, 30, 30, 0.5); /* White border with transparency */
+}
+
+.nownext12hoursinfo p,
+.nownext12hoursinfo h5 {
+    margin: 5px 0; /* Adjust the spacing between elements inside the box */
+    text-align: center; /* Center-align the paragraph */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.timeInformation {
+    margin: 5px 0; /* Adjust the spacing between elements inside the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+/* First hr */
+
+.firsthr {
+    /* Your CSS styles for the hr element with the class "firsthr" */
+    width: 81%;
+    border: none; /* Remove default border */
+    border-top: 1px solid #fff; /* Add a custom top border */
+    margin-top: 20px; /* Adjust top margin as needed */
+    margin-bottom: 20px; /* Adjust bottom margin as needed */
+}
+
+
+
+
+/* Weather description */
+.weather-description {
+    width: 81%;
+    padding: 5px 20px;
+    margin: 1%  7.5% 4%  7.9%;
+    
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Ensure 4 items per row */
+    gap: 20px; /* Adjust gap between grid items as needed */
+}
+
+
+.detail-info {
+    width: 220px;
+    height: 120px;
+    padding-left: 15px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add border for better visualization */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+}
+
+
+.detailsTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detail-content {
+    display: inline-flex;
+    
+}
+
+.detail-content span {
+    position: absolute;
+    margin-left: 172px;
+    font-size: 35px;
+    margin-top: 12px;
+}
+
+
+
+.detail-content h5 {
+    font-weight: 900; /* Make the text bold */
+    font-size: 14.5px; /* Adjust the font size as needed */
+}
+
+.weatherDescription {
+    width: 100%;
+    margin: 2%  7.5% -4%  7.9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weatherdetailsTitle {
+   position: absolute;
+   margin: 0px 0px 27% -6.5% ;
+}
+
+.theweatherbox {
+    width: 25%;
+    margin: 0px 0px 0px -6% ;
+   
+}
+
+.boxsizingmain {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.titleName {
+    position: absolute;
+    width: 100px;
+    font-size: large;
+    margin: 0px 0px 18% -3%;
+}
+
+.hour-iconweather {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    /* Add any other styling you need for the image */
+    margin: 0px -16% 18% 0px;
+}
+
+.descriptionexplain {
+    position: absolute;
+    width: 18%;
+    margin: 65px 0px 0px -20px;
+    /* width: 60%; Remove this line */
+}
+
+#regionMap {
+    margin-right: 75px; /* Adjust margin as needed */
+    margin-bottom: 60px;
+}
+
+#twodmap, #threedmap {
+        border-radius: 10px;
+        overflow: hidden; /* Ensures that the border-radius is applied correctly */
+}
+
+/* Set styles for the entire footer */
+footer {
+    display: block; 
+    background-color: transparent !important;
+    font-size: 1.1rem;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .footermain {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: 10px;
+  }
+  
+  .footeraccount {
+    position: relative;
+    width: 30%;
+    height:  250px;
+    background-color: rgba(239, 232, 232, 0.5);
+    right: 12.5%;
+    padding: 50px 10px;
+    border: 1px solid #c0b9b9;
+    border-top: none;
+    border-bottom: none;
+  }  
+  
+  .footeraccount a {
+    color: #fff; /* Set link color to white */
+    padding-left: 10px;
+  }
+  
+  #footer-info hr {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  .footerlogin {
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .footerlogin h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .footerlogin input[type="email"] {
+    padding: 5px 10px;
+    width: 60%;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  .footerlogin button[type="submit"] {
+    background-color: rgba(159, 153, 153, 0.5);
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .footerlogin button[type="submit"]:hover {
+    background-color: rgba(190, 187, 187, 0.5);
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .social-networks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-networks li {
+    margin: 0 10px;
+  }
+  
+  .social-networks li a {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+  @keyframes social-networkslia-hover {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 2px;
+    }
+  }
+  
+  .social-networks li a:hover {
+    animation: social-networkslia-hover 0.1s ease-out forwards;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .bloglink a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .bloglink a:hover {
+    animation: social-networkslia-hover 0.1s ease-out forwards;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .cuservice {
+    position: relative;
+    left: 10%;
+    margin-top: 20px;
+  }
+  
+  .cosupport {
+    position: relative;
+    /* left: 0.2; */
+    margin-top: 20px;
+  }
+  
+  .footermain a, .footertxt a {
+    color: #fff; /* Set link color to white */
+    text-decoration: none;
+  }
+  
+  .footermain a:hover , .footertxt a:hover {
+    text-decoration: underline;
+    color:rgb(182, 187, 196);
+  }
+  
+  .footeritemone p, .copywrite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
