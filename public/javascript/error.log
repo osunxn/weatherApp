@@ -1,0 +1,1662 @@
+2024-05-22T12:43:34.199Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:91:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-22T12:44:35.750Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-22T13:53:46.803Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-22T15:33:51.602Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:108:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-22T15:34:37.467Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:108:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-22T20:17:21.821Z - Error: connect ETIMEDOUT 169.150.247.40:443
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:836:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3086:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-22T22:01:08.790Z - AxiosError: Request failed with status code 401
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at Unzip.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at Unzip.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-22T22:01:08.804Z - AxiosError: Request failed with status code 403
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-22T22:01:35.997Z - AxiosError: Request failed with status code 401
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1966:12)
+    at Unzip.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3065:11)
+    at Unzip.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3876:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T08:12:07.388Z - ReferenceError: Cesium is not defined
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:129:9
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+
+2024-05-23T08:12:22.920Z - ReferenceError: Cesium is not defined
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:129:9
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+
+2024-05-23T08:16:10.705Z - ReferenceError: Cesium is not defined
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:129:9
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+
+2024-05-23T08:22:32.809Z - TypeError: Cesium.createWorldTerrain is not a function
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:148:41
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+
+2024-05-23T08:26:04.245Z - TypeError: Cesium.createWorldTerrain is not a function
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:151:41
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+
+2024-05-23T19:51:04.593Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T19:51:10.486Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T19:53:38.993Z - Error: getaddrinfo ENOTFOUND api.ipdata.co
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T19:53:39.031Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T19:56:29.297Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:22:38.548Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:23:40.457Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:25:29.732Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:25:59.850Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:27:13.729Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:28:10.982Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:29:18.494Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T20:42:26.874Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T21:06:37.009Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\weather.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-23T21:07:02.482Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\weather.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-23T21:08:07.975Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\weather.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-23T21:14:39.119Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-23T21:17:26.995Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-23T22:47:06.760Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-23T23:56:11.280Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:05:18.090Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:06:35.306Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:06:56.537Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:07:39.865Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:22:31.647Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:23:23.477Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:23:59.545Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:26:39.019Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:29:07.276Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:29:44.662Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:39:29.650Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:39:30.938Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:39:40.091Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:39:42.501Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:50:11.564Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:51:46.483Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:55:20.112Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:56:39.893Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:57:24.155Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:58:31.752Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T00:58:54.332Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-24T01:02:14.962Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-25T08:24:18.663Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-25T22:16:17.512Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:20:14.885Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:21:45.249Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:23:22.652Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:26:15.289Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:28:46.755Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:31:58.643Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:33:20.011Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:33:39.681Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:34:10.697Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:36:54.795Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T01:37:42.448Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T02:36:51.455Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T03:52:29.004Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T03:56:26.943Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T03:56:48.233Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:00:57.330Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:01:33.276Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:02:15.304Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:02:58.829Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:03:37.780Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:05:10.738Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:05:39.676Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:06:13.311Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:06:38.077Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:06:52.690Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:08:02.444Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:08:35.486Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:10:09.846Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-26T08:11:04.263Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-27T08:17:24.034Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-27T08:22:39.632Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-27T09:35:10.553Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-27T09:35:38.080Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-27T14:44:10.670Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:47:28.959Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:49:22.936Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:14.048Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:17.906Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:19.243Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:20.468Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:21.386Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:22.507Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:23.352Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:24.262Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:25.388Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:26.365Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:27.308Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:51:28.474Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:52:50.213Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:93:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-27T14:52:52.836Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:24.699Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:26.878Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:28.055Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:29.381Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:30.213Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:31.212Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:31.970Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:32.787Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:53:33.865Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:55:37.889Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T14:59:44.294Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T15:03:31.696Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-27T15:05:25.058Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:110:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-29T08:06:35.598Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-29T19:58:23.379Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T08:04:17.094Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T08:41:12.685Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T08:41:42.102Z - Error: Client network socket disconnected before secure TLS connection was established
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T08:42:40.399Z - Error: read ECONNRESET
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T08:43:25.090Z - Error: Client network socket disconnected before secure TLS connection was established
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-30T22:53:31.344Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:94:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-05-30T22:54:23.734Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:111:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+
+2024-05-31T07:55:19.460Z - Error: getaddrinfo ENOTFOUND ipapi.co
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:55:19.476Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:56:15.936Z - Error: getaddrinfo ENOTFOUND ipapi.co
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:56:15.957Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:57:18.683Z - Error: getaddrinfo ENOTFOUND ipapi.co
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:57:18.733Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:58:29.983Z - Error: getaddrinfo ENOTFOUND ipapi.co
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-05-31T07:58:30.015Z - Error: getaddrinfo ENOTFOUND api.weatherapi.com
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-04T17:55:50.622Z - Error: Client network socket disconnected before secure TLS connection was established
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-04T17:56:36.339Z - Error: Client network socket disconnected before secure TLS connection was established
+    at AxiosError.from (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:841:14)
+    at RedirectableRequest.handleRequestError (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3106:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\follow-redirects\index.js:38:24)
+    at ClientRequest.emit (node:events:514:28)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:27:21.116Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:29:04.076Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:30:20.217Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:31:03.082Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:31:03.318Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:31:36.386Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:31:58.517Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:32:36.595Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:32:58.441Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:33:40.713Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:34:38.863Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:34:58.074Z - AxiosError: Request failed with status code 400
+    at settle (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:1983:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:3085:11)
+    at IncomingMessage.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\axios\dist\node\axios.cjs:4224:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+2024-06-05T10:57:18.242Z - Error: ENOENT: no such file or directory, open 'C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\location.json'
+    at Object.open (node:internal/fs/sync:78:18)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:94:29
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+
+2024-06-05T10:58:24.329Z - TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\server.js:111:33
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\router\index.js:280:10)
+    at expressInit (C:\Users\os\OneDrive\Desktop\web\weatherApp-alx\public\javascript\node_modules\express\lib\middleware\init.js:40:5)
+

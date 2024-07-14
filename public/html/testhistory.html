@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>History Extractor</h1>
+  <button id="extractHistory">Extract History</button>
+  <ul id="historyList"></ul> 
+
+  <script>
+    // popup.js
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const extractButton = document.getElementById('extractHistory');
+    const historyList = document.getElementById('historyList');
+
+    extractButton.addEventListener('click', () => {
+        chrome.runtime.sendMessage({ extract: 'history' }, (response) => {
+        console.log('Received history items:', response.historyItems);
+        historyList.innerHTML = ''; // Clear previous entries
+
+        response.historyItems.forEach((item) => {
+            const li = document.createElement('li');
+            li.textContent = item.title + ' - ' + item.url;
+            historyList.appendChild(li);
+        });
+        });
+    });
+    });
+
+  </script>
+</body>
+</html>

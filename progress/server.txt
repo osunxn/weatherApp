@@ -1,0 +1,826 @@
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+// Create server application (port 3000)
+const serverApp = express();
+const serverPort = 3000;
+
+// Middleware to parse JSON bodies
+serverApp.use(bodyParser.json());
+
+// Enable CORS
+serverApp.use(cors());
+
+// Function to save JSON data to a file
+function saveJsonToFile(filename, data) {
+    fs.writeFile(path.join(__dirname, filename), JSON.stringify(data, null, 2), err => {
+        if (err) {
+            console.error('Error saving JSON file:', err);
+        } else {
+            console.log(`JSON data saved to ${filename}`);
+        }
+    });
+}
+
+// Endpoint to get user's location
+serverApp.get('/userlocation', (req, res) => {
+    const apiKey = '0a592ebb2449d59c84ef89c06b60ecdc122d2aa12a2777aff6393503';
+    const apiUrl = `https://api.ipdata.co?api-key=${apiKey}`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('location.json', data); // Save location data to location.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching user location' });
+            console.error('Error fetching weather data:', error);
+        });
+});
+
+// Endpoint to get weather data for a specific city
+serverApp.get('/weather', (req, res) => {
+    const city = req.query.city;
+    const apiKey = '9d25421f1b894a7abb8225858240204'; // Your weather API key
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('weather.json', data); // Save weather data to weather.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching weather data' });
+            console.error('Error fetching weather data:', error);
+        });
+});
+
+serverApp.set('json spaces', 2); // Set JSON pretty-printing with 2 spaces
+
+serverApp.get('/', (req, res) => {
+    const requestData = {
+        method: req.method,
+        url: req.url,
+        headers: req.headers,
+        query: req.query,
+        params: req.params,
+        body: req.body // Only available for POST, PUT, and PATCH requests
+    };
+
+    // Send the response along with the request data
+    res.json({ message: 'Server is running on port 3000', requestData });
+});
+
+
+// Start the server application
+serverApp.listen(serverPort, () => {
+    console.log(`Server is running on http://localhost:${serverPort}`);
+});
+
+
+const app = express();
+const port = 5500;
+
+// Serve HTML files from the public/html directory
+app.use(express.static(path.join(__dirname, '..', 'public', '..', 'html')));
+
+// Serve CSS files from the public/styling directory
+app.use('/css', express.static(path.join(__dirname, '..', 'public', '..', 'styling')));
+
+// Serve JavaScript files from the public/javascript directory
+app.use('/js', express.static(path.join(__dirname, '..', 'public', '..', 'javascript')));
+
+// Serve image files from the public/assets directory
+app.use('/assets', express.static(path.join(__dirname, '..', 'public', '..', 'assets')));
+
+// Handle root path ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+// Define the path to the weather.json file
+// const weatherFilePath = path.join(__dirname, '..', 'public', '..', 'javascript', 'weather.json');
+
+// Read the weather.json file
+// fs.readFile(weatherFilePath, 'utf8', (err, data) => {
+//     if (err) {
+//         console.error('Error reading weather.json:', err);
+//     } else {
+//        try {
+//             const weatherData = JSON.parse(data);
+//            const weatherConditionText = weatherData.current.condition.text;
+//             setBackground(weatherConditionText); // Set background based on weather condition text
+//         } catch (error) {
+//             console.error('Error parsing weather data:', error);
+//         }
+//     }
+// });
+
+---------------------------------------------BetterWeather----------------------------------------------------------------
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+// Create server application (port 3000)
+const serverApp = express();
+const serverPort = 3000;
+
+// Middleware to parse JSON bodies
+serverApp.use(bodyParser.json());
+
+// Enable CORS
+serverApp.use(cors());
+
+// Function to save JSON data to a file
+function saveJsonToFile(filename, data) {
+    fs.writeFile(path.join(__dirname, filename), JSON.stringify(data, null, 2), err => {
+        if (err) {
+            console.error('Error saving JSON file:', err);
+        } else {
+            console.log(`JSON data saved to ${filename}`);
+        }
+    });
+}
+
+// Create Express applications for each function
+const weatherApp = express();
+const userLocationApp = express();
+const readJsonFileApp = express();
+
+// Weather endpoint
+weatherApp.get('/', (req, res) => {
+    const city = req.query.city;
+    const apiKey = '9d25421f1b894a7abb8225858240204'; // Your weather API key
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('weather.json', data); // Save weather data to weather.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching weather data' });
+            console.error('Error fetching weather data:', error);
+        });
+});
+
+// User location endpoint
+userLocationApp.get('/', (req, res) => {
+    const apiKey = '0a592ebb2449d59c84ef89c06b60ecdc122d2aa12a2777aff6393503';
+    const apiUrl = `https://api.ipdata.co?api-key=${apiKey}`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('location.json', data); // Save location data to location.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching user location' });
+            console.error('Error fetching user location:', error);
+        });
+});
+
+// Read JSON file endpoint (changed to accept GET requests)
+readJsonFileApp.get('/', (req, res) => {
+    try {
+        const { filename, content } = req.query; // Use req.query to get parameters from query string
+
+        // Construct file path
+        const filePath = path.join(__dirname, `${filename}.json`);
+
+        // Read JSON file synchronously
+        const jsonData = fs.readFileSync(filePath);
+
+        // Parse JSON data
+        const parsedData = JSON.parse(jsonData);
+
+        // Extract requested content
+        let result = parsedData;
+        for (const key of content) {
+            if (result.hasOwnProperty(key)) {
+                result = result[key];
+            } else {
+                return res.status(404).send('Requested content not found');
+            }
+        }
+
+        // Check if the result is an object, if so, return the value of the last property
+        if (typeof result === 'object') {
+            const keys = Object.keys(result);
+            const lastKey = keys[keys.length - 1];
+            result = result[lastKey];
+        }
+
+        return res.send(result);
+    } catch (error) {
+        console.error('Error reading JSON file:', error);
+        return res.status(500).send('Error reading JSON file');
+    }
+});
+
+
+// Additional route to handle root path ("/")
+serverApp.get('/', (req, res) => {
+    const requestData = {
+        method: req.method + '\n',
+        url: req.url + '\n',
+        headers: req.headers,
+        query: req.query,
+        params: req.params,
+        body: req.body // Only available for POST, PUT, and PATCH requests
+    };
+
+    // Convert the requestData object to a JSON string with two spaces indentation
+    const responseData = JSON.stringify({ message: 'Server is running on port 3000', requestData }, null, 2);
+
+    // Send the response
+    res.set('Content-Type', 'application/json').send(responseData + '\n');
+});
+
+// Mount the Express applications at different paths
+serverApp.use('/weather', weatherApp);
+serverApp.use('/userlocation', userLocationApp);
+serverApp.use('/readJsonFile', readJsonFileApp);
+
+// Start the server application
+serverApp.listen(serverPort, () => {
+    console.log(`Server is running on http://localhost:${serverPort}`);
+});
+
+
+
+const app = express();
+const port = 5500;
+
+// Serve HTML files from the public/html directory
+app.use(express.static(path.join(__dirname, '..', 'public', '..', 'html')));
+
+// Serve CSS files from the public/styling directory
+app.use('/css', express.static(path.join(__dirname, '..', 'public', '..', 'styling')));
+
+// Serve JavaScript files from the public/javascript directory
+app.use('/js', express.static(path.join(__dirname, '..', 'public', '..', 'javascript')));
+
+// Serve image files from the public/assets directory
+app.use('/assets', express.static(path.join(__dirname, '..', 'public', '..', 'assets')));
+
+// Handle root path ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+// Create server application (port 3000)
+const serverApp = express();
+const serverPort = 3000;
+
+// Middleware to parse JSON bodies
+serverApp.use(bodyParser.json());
+
+// Enable CORS
+serverApp.use(cors());
+
+// Function to save JSON data to a file
+function saveJsonToFile(filename, data) {
+    fs.writeFile(path.join(__dirname, filename), JSON.stringify(data, null, 2), err => {
+        if (err) {
+            console.error('Error saving JSON file:', err);
+        } else {
+            console.log(`JSON data saved to ${filename}`);
+        }
+    });
+}
+
+// User location endpoint
+serverApp.get('/userlocation', (req, res) => {
+    console.log('User location endpoint hit');
+    const apiKey = '0a592ebb2449d59c84ef89c06b60ecdc122d2aa12a2777aff6393503';
+    const apiUrl = `https://api.ipdata.co?api-key=${apiKey}`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('location.json', data); // Save location data to location.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching user location' });
+            console.error('Error fetching user location:', error);
+        });
+});
+
+// Weather endpoint
+serverApp.get('/weather', (req, res) => {
+    console.log('Weather endpoint hit');
+    const city = req.query.city;
+    const apiKey = '9d25421f1b894a7abb8225858240204'; // Your weather API key
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('weather.json', data); // Save weather data to weather.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching weather data' });
+            console.error('Error fetching weather data:', error);
+        });
+});
+
+// Read JSON file endpoint
+serverApp.get('/readJsonFile', (req, res) => {
+    console.log('Read JSON file endpoint hit');
+    // console.log('Request body:', req.body);
+    try {
+        const { filename, content } = req.query;
+
+        // Construct file path
+        const filePath = path.join(__dirname, `${filename}.json`);
+        // console.log('Reading file:', filePath);
+
+        // Read JSON file synchronously
+        const jsonData = fs.readFileSync(filePath);
+
+        // Parse JSON data
+        const parsedData = JSON.parse(jsonData);
+
+        // Extract requested content
+        let result = parsedData;
+        for (const key of content) {
+            if (result.hasOwnProperty(key)) {
+                result = result[key];
+            } else {
+                return res.status(404).send('Requested content not found');
+            }
+        }
+
+        // Check if the result is an object, if so, return the value of the last property
+        if (typeof result === 'object') {
+            const keys = Object.keys(result);
+            const lastKey = keys[keys.length - 1];
+            result = result[lastKey];
+        }
+
+        return res.send(result);
+    } catch (error) {
+        console.error('Error reading JSON file:', error);
+        return res.status(500).send('Error reading JSON file');
+    }
+});
+
+// Additional route to handle root path ("/")
+serverApp.get('/', (req, res) => {
+    const requestData = {
+        method: req.method + '\n',
+        url: req.url + '\n',
+        headers: req.headers,
+        query: req.query,
+        params: req.params,
+        body: req.body // Only available for POST, PUT, and PATCH requests
+    };
+
+    // Convert the requestData object to a JSON string with two spaces indentation
+    const responseData = JSON.stringify({ message: 'Server is running on port 3000', requestData }, null, 2);
+
+    // Send the response
+    res.set('Content-Type', 'application/json').send(responseData + '\n');
+});
+
+
+// Mount the Express applications at different paths
+serverApp.use('/weather', weatherApp);
+serverApp.use('/userlocation', userLocationApp);
+serverApp.use('/readJsonFile', readJsonFileApp);
+
+// Start the server application
+serverApp.listen(serverPort, () => {
+    console.log(`Server is running on http://localhost:${serverPort}`);
+});
+
+// Static file server for the client application
+const app = express();
+const port = 5500;
+
+// Serve HTML files from the public/html directory
+app.use(express.static(path.join(__dirname, '..', 'public', '..', 'html')));
+
+// Serve CSS files from the public/styling directory
+app.use('/css', express.static(path.join(__dirname, '..', 'public', '..', 'styling')));
+
+// Serve JavaScript files from the public/javascript directory
+app.use('/js', express.static(path.join(__dirname, '..', 'public', '..', 'javascript')));
+
+// Serve image files from the public/assets directory
+app.use('/assets', express.static(path.join(__dirname, '..', 'public', '..', 'assets')));
+
+// Handle root path ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Start the client server
+app.listen(port, () => {
+    console.log(`Client server is running on http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+----------------------------------- you will be missed ------------------------------------------------------------------
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+// Function to save JSON data to a file
+function saveJsonToFile(filename, data) {
+    fs.writeFile(path.join(__dirname, filename), JSON.stringify(data, null, 2), err => {
+        if (err) {
+            console.error('Error saving JSON file:', err);
+        } else {
+            console.log(`JSON data saved to ${filename}`);
+        }
+    });
+}
+
+// Create Express applications for each function
+const createWeatherApp = () => {
+    const weatherApp = express();
+    weatherApp.use(cors());
+    weatherApp.use(bodyParser.json());
+
+    weatherApp.get('/', (req, res) => {
+        console.log('Weather endpoint hit');
+        const city = req.query.city;
+        const apiKey = '9d25421f1b894a7abb8225858240204'; // Your weather API key
+        const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+
+        axios.get(apiUrl)
+            .then(response => {
+                const data = response.data;
+                saveJsonToFile('weather.json', data); // Save weather data to weather.json
+                res.json(data);
+            })
+            .catch(error => {
+                res.status(500).json({ error: 'Error fetching weather data' });
+                console.error('Error fetching weather data:', error);
+            });
+    });
+
+    return weatherApp;
+};
+
+const createUserLocationApp = () => {
+    const userLocationApp = express();
+    userLocationApp.use(cors());
+    userLocationApp.use(bodyParser.json());
+
+    userLocationApp.get('/', (req, res) => {
+        console.log('User location endpoint hit');
+        const apiKey = '0a592ebb2449d59c84ef89c06b60ecdc122d2aa12a2777aff6393503';
+        const apiUrl = `https://api.ipdata.co?api-key=${apiKey}`;
+
+        axios.get(apiUrl)
+            .then(response => {
+                const data = response.data;
+                saveJsonToFile('location.json', data); // Save location data to location.json
+                res.json(data);
+            })
+            .catch(error => {
+                res.status(500).json({ error: 'Error fetching user location' });
+                console.error('Error fetching user location:', error);
+            });
+    });
+
+    return userLocationApp;
+};
+
+const createReadJsonFileApp = () => {
+    const readJsonFileApp = express();
+    readJsonFileApp.use(cors());
+    readJsonFileApp.use(bodyParser.json());
+
+    readJsonFileApp.get('/', (req, res) => {
+        console.log('Read JSON file endpoint hit');
+        try {
+            const { filename, content } = req.query; // Use req.query to get parameters from query string
+
+            // Construct file path
+            const filePath = path.join(__dirname, `${filename}.json`);
+
+            // Check if the file exists
+            if (!fs.existsSync(filePath)) {
+                return res.status(404).send('Requested content not found');
+            }
+
+            // Read JSON file synchronously
+            const jsonData = fs.readFileSync(filePath);
+
+            // Parse JSON data
+            const parsedData = JSON.parse(jsonData);
+
+            // Extract requested content
+            let result = parsedData;
+            for (const key of content) {
+                if (result.hasOwnProperty(key)) {
+                    result = result[key];
+                } else {
+                    return res.status(404).send('Requested content not found');
+                }
+            }
+
+            // Check if the result is an object, if so, return the value of the last property
+            if (typeof result === 'object') {
+                const keys = Object.keys(result);
+                const lastKey = keys[keys.length - 1];
+                result = result[lastKey];
+            }
+
+            return res.send(result);
+        } catch (error) {
+            return res.status(500).send('Error reading JSON file');
+        }
+    });
+
+    return readJsonFileApp;
+};
+
+const createServerApp = () => {
+    const serverApp = express();
+    const serverPort = 3000;
+
+    serverApp.use(cors());
+    serverApp.use(bodyParser.json());
+
+    // Mount the Express applications at different paths
+    serverApp.use('/weather', createWeatherApp());
+    serverApp.use('/userlocation', createUserLocationApp());
+    serverApp.use('/readJsonFile', createReadJsonFileApp());
+
+    // Additional route to handle root path ("/")
+    serverApp.get('/', (req, res) => {
+        const requestData = {
+            method: req.method + '\n',
+            url: req.url + '\n',
+            headers: req.headers,
+            query: req.query,
+            params: req.params,
+            body: req.body // Only available for POST, PUT, and PATCH requests
+        };
+
+        // Convert the requestData object to a JSON string with two spaces indentation
+        const responseData = JSON.stringify({ message: 'Server is running on port 3000', requestData }, null, 2);
+
+        // Send the response
+        res.set('Content-Type', 'application/json').send(responseData + '\n');
+    });
+
+    serverApp.listen(serverPort, () => {
+        console.log(`Server is running on http://localhost:${serverPort}`);
+    });
+};
+
+createServerApp();
+
+
+const app = express();
+const port = 5500;
+
+// Serve HTML files from the public/html directory
+app.use(express.static(path.join(__dirname, '..', 'public', '..', 'html')));
+
+// Serve CSS files from the public/styling directory
+app.use('/css', express.static(path.join(__dirname, '..', 'public', '..', 'styling')));
+
+// Serve JavaScript files from the public/javascript directory
+app.use('/js', express.static(path.join(__dirname, '..', 'public', '..', 'javascript')));
+
+// Serve image files from the public/assets directory
+app.use('/assets', express.static(path.join(__dirname, '..', 'public', '..', 'assets')));
+
+// Handle root path ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+
+
+----------------------------------------------------- most stabel ---------------------------------------------
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+// Create server application (port 3000)
+const serverApp = express();
+const serverPort = 3000;
+
+// Middleware to parse JSON bodies
+serverApp.use(bodyParser.json());
+
+// Enable CORS
+serverApp.use(cors());
+
+// Function to save JSON data to a file
+function saveJsonToFile(filename, data) {
+    fs.writeFile(path.join(__dirname, filename), JSON.stringify(data, null, 2), err => {
+        if (err) {
+            console.error('Error saving JSON file:', err);
+        } else {
+            console.log(`JSON data saved to ${filename}`);
+        }
+    });
+}
+
+// Create Express applications for each function
+const weatherApp = express();
+const userLocationApp = express();
+const readJsonFileApp = express();
+
+// Weather endpoint
+weatherApp.get('/', (req, res) => {
+
+    console.log('Weather endpoint hit');
+    const city = req.query.city;
+    const apiKey = '9d25421f1b894a7abb8225858240204'; // Your weather API key
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('weather.json', data); // Save weather data to weather.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching weather data' });
+            console.error('Error fetching weather data:', error);
+        });
+});
+
+// User location endpoint
+userLocationApp.get('/', (req, res) => {
+    
+    console.log('User location endpoint hit');
+    const apiKey = '0a592ebb2449d59c84ef89c06b60ecdc122d2aa12a2777aff6393503';
+    const apiUrl = `https://api.ipdata.co?api-key=${apiKey}`;
+
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            saveJsonToFile('location.json', data); // Save location data to location.json
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error fetching user location' });
+            console.error('Error fetching user location:', error);
+        });
+});
+
+// Read JSON file endpoint (changed to accept GET requests)
+readJsonFileApp.get('/', (req, res) => {
+
+    console.log('Read JSON file endpoint hit');
+    try {
+        const { filename, content } = req.query; // Use req.query to get parameters from query string
+
+        // Construct file path
+        const filePath = path.join(__dirname, `${filename}.json`);
+
+        // Read JSON file synchronously
+        const jsonData = fs.readFileSync(filePath);
+
+        // Parse JSON data
+        const parsedData = JSON.parse(jsonData);
+
+        // Extract requested content
+        let result = parsedData;
+        for (const key of content) {
+            if (result.hasOwnProperty(key)) {
+                result = result[key];
+            } else {
+                return res.status(404).send('Requested content not found');
+            }
+        }
+
+        // Check if the result is an object, if so, return the value of the last property
+        if (typeof result === 'object') {
+            const keys = Object.keys(result);
+            const lastKey = keys[keys.length - 1];
+            result = result[lastKey];
+        }
+
+        return res.send(result);
+    } catch (error) {
+        console.error('Error reading JSON file:', error);
+        return res.status(500).send('Error reading JSON file');
+    }
+});
+
+
+// Additional route to handle root path ("/")
+serverApp.get('/', (req, res) => {
+    const requestData = {
+        method: req.method + '\n',
+        url: req.url + '\n',
+        headers: req.headers,
+        query: req.query,
+        params: req.params,
+        body: req.body // Only available for POST, PUT, and PATCH requests
+    };
+
+    // Convert the requestData object to a JSON string with two spaces indentation
+    const responseData = JSON.stringify({ message: 'Server is running on port 3000', requestData }, null, 2);
+
+    // Send the response
+    res.set('Content-Type', 'application/json').send(responseData + '\n');
+});
+
+// Mount the Express applications at different paths
+serverApp.use('/weather', weatherApp);
+serverApp.use('/userlocation', userLocationApp);
+serverApp.use('/readJsonFile', readJsonFileApp);
+
+// Start the server application
+serverApp.listen(serverPort, () => {
+    console.log(`Server is running on http://localhost:${serverPort}`);
+});
+
+
+
+const app = express();
+const port = 5500;
+
+// Serve HTML files from the public/html directory
+app.use(express.static(path.join(__dirname, '..', 'public', '..', 'html')));
+
+// Serve CSS files from the public/styling directory
+app.use('/css', express.static(path.join(__dirname, '..', 'public', '..', 'styling')));
+
+// Serve JavaScript files from the public/javascript directory
+app.use('/js', express.static(path.join(__dirname, '..', 'public', '..', 'javascript')));
+
+// Serve image files from the public/assets directory
+app.use('/assets', express.static(path.join(__dirname, '..', 'public', '..', 'assets')));
+
+// Handle root path ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});

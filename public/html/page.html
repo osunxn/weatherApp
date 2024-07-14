@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow"> <!-- This tag tells the search engine to index and follow links on the page -->
+
+    <meta name="googlebot" content="index, follow"> <!-- This tag specifically targets the Googlebot -->
+
+    <!-- <meta name="robots" content="noindex, nofollow"> This tag tells the search engine not to index the page and not to follow links on the page -->
+
+    <title>WeatherSphere/content</title>
+    <meta name="description" content="Welcome to WeatherSphere, your comprehensive weather companion providing real-time updates and forecasts for cities worldwide. With WeatherSphere, you can effortlessly check the current weather conditions, hourly forecasts, and 7-day outlooks to plan your day effectively. Stay informed about temperature, humidity, wind speed, and precipitation levels with our intuitive interface. Whether you're planning a trip, outdoor activity, or simply want to stay ahead of the weather, WeatherSphere has you covered. Explore detailed weather maps, satellite imagery, and radar views for in-depth insights. Download WeatherSphere now for accurate weather forecasts and seamless user experience. Available on web, iOS, and Android devices. Powered by WeatherAPI.com for reliable weather data. Never let the weather catch you off guard again with WeatherSphere!">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/ui.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script></head>
+    <script src="https://kit.fontawesome.com/d1671ea2f0.js" crossorigin="anonymous"></script>
+<body>
+   <div id="pagePg" hidden>
+    <div class="navigation">
+    </div>
+    <div class="moreNavigation">
+    </div>
+    <div class="page-content">
+        <section class="about" id="about" hidden>
+            <h2>About WeatherSphere</h2>
+            <p>WeatherSphere is a comprehensive weather application designed to provide users with accurate and up-to-date weather forecasts. Inspired by the need for accessible and reliable weather information, WeatherSphere aims to deliver a seamless user experience for users of all ages and backgrounds.</p>
+            
+            <h3>Key Features:</h3>
+            <ul>
+                <li>
+                    <strong>Real-time Weather Updates:</strong>
+                    <p>WeatherSphere provides real-time updates on current weather conditions, including temperature, humidity, wind speed, and more. Users can stay informed about the latest weather changes in their location and plan their activities accordingly.</p>
+                </li>
+                <li>
+                    <strong>Hourly and Daily Forecasts:</strong>
+                    <p>Users can access hourly and daily forecasts to plan their schedules ahead of time. WeatherSphere offers detailed forecasts, including temperature trends, precipitation chances, and weather conditions for the next several hours and days.</p>
+                </li>
+                <li>
+                    <strong>Interactive Map:</strong>
+                    <p>WeatherSphere features an interactive map with radar and satellite imagery, allowing users to visualize weather patterns in their area. The map provides additional context to weather forecasts and helps users understand weather conditions more effectively.</p>
+                </li>
+                <li>
+                    <strong>Customizable Units:</strong>
+                    <p>Users can customize units for temperature, wind speed, pressure, and other weather parameters based on their preferences. WeatherSphere offers flexibility in unit selection to accommodate users from different regions and backgrounds.</p>
+                </li>
+                <li>
+                    <strong>Search Functionality:</strong>
+                    <p>WeatherSphere includes a search functionality that enables users to find weather information for locations worldwide. Users can simply enter the name of their desired location, and WeatherSphere will provide accurate weather forecasts for that area.</p>
+                </li>
+                <li>
+                    <strong>Personalized User Profiles:</strong>
+                    <p>Users can create personalized profiles within WeatherSphere to save their favorite locations and customize their weather experience. Saved locations allow users to quickly access weather forecasts for frequently visited areas and receive relevant weather alerts.</p>
+                </li>
+                <li>
+                    <strong>Weather Alerts and Notifications:</strong>
+                    <p>WeatherSphere provides weather alerts and notifications to keep users informed about severe weather conditions and other important updates. Users can receive notifications for events such as storms, hurricanes, and extreme temperatures, allowing them to take necessary precautions and stay safe.</p>
+                </li>
+                <li>
+                    <strong>Background Changes Based on Weather Conditions:</strong>
+                    <p>WeatherSphere dynamically adjusts its background color and imagery based on current weather conditions. For example, on sunny days, the background may feature clear skies and sunshine, while on rainy days, the background may display raindrops and overcast skies. This visual feedback enhances the user experience and reflects real-world weather conditions.</p>
+                </li>
+            </ul>
+            
+            <p>WeatherSphere is developed and maintained by Splendor Freeman, a passionate developer dedicated to creating user-friendly applications that make a positive impact on people's lives.</p>
+            
+            <!-- Team Members -->
+            <div class="team-members">
+                <h3>Team Members</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/osunxn" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+                </ul>
+            </div>
+            
+            <!-- Project Info -->
+            <div class="project-info">
+                <h3>Project Details</h3>
+                <ul>
+                    <li><strong>Project Name:</strong> WeatherSphere</li>
+                    <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Leaflet.js, WeatherAPI.com</li>
+                    <li><strong>Repository:</strong> <a href="https://github.com/jamesdavids/weathersphere" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><strong>Timeline:</strong> Started in January 2024, ongoing</li>
+                </ul>
+            </div>
+        </section>
+
+    <section class="blog" id="blog" hidden>
+        <!-- Introduction -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <!-- <img src="banner_image.jpg" alt="Banner Image"> -->
+            <p>Our project, WeatherSphere, is a comprehensive weather application designed to provide users with accurate and up-to-date weather forecasts. Our team members include John Smith, Jane Doe, and myself. As an engineering problem, we focused on creating a seamless user experience across web and mobile platforms, and integrating a reliable weather API.</p>
+            <p>The project was created for users of all ages and backgrounds who need access to reliable weather information. My personal focus was on frontend development and user interface design.</p>
+        </section>
+
+        <!-- Personal Story -->
+        <section id="personal-story">
+            <h2>Personal Story</h2>
+            <p>My passion for weather forecasting began during my childhood in a small rural town surrounded by vast open fields. Bicycling was my main mode of transportation, and I often found myself fascinated by the ever-changing weather patterns. As I grew older, I realized the importance of accurate weather information for outdoor activities and daily planning. This project is not just about building a weather app; it's about sharing my love for weather with others and making weather data more accessible to everyone.</p>
+        </section>
+
+        <!-- Project Accomplishments -->
+        <section id="project-accomplishments">
+            <h2>Project Accomplishments</h2>
+            <p>With WeatherSphere, we have successfully created a user-friendly weather application that provides real-time updates and forecasts. The architecture diagram below illustrates the flow of data through our application:</p>
+            <!-- <img src="architecture_diagram.jpg" alt="Architecture Diagram"> -->
+            <p>For the frontend, we chose to use HTML, CSS, and JavaScript without any additional frameworks to focus on optimizing performance and customization. The backend is powered by Node.js and utilizes the WeatherAPI.com for weather data. Our key features include real-time weather updates, interactive maps, customizable units, search functionality, personalized user profiles, weather alerts, and dynamic background changes based on weather conditions.</p>
+        </section>
+
+        <!-- Technical Challenge -->
+        <section id="technical-challenge">
+            <h2>Technical Challenge</h2>
+            <p>One of the most difficult technical challenges we faced was implementing OAuth via Facebook for user authentication. The situation arose when we realized the need for user accounts to save personalized settings and favorite locations. Our task was to integrate Facebook OAuth securely within our application to authenticate users and authorize access to their accounts.</p>
+            <p>The action we took involved extensive research, consultation with experienced developers, and thorough testing of the authentication process. Despite encountering initial difficulties with token validation, we persisted in troubleshooting and ultimately resolved the issue by adjusting our request parameters and handling the authentication response effectively.</p>
+            <p>As a result, we successfully implemented Facebook OAuth within our application, providing users with a secure and convenient authentication method for accessing personalized features.</p>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section id="lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>Through the development of WeatherSphere, I gained valuable technical insights into frontend optimization, backend integration, and user authentication. Additionally, I learned the importance of perseverance and collaboration when faced with complex technical challenges.</p>
+            <p>This project has reaffirmed my passion for software engineering and provided me with practical experience in developing real-world applications. Moving forward, I will continue to refine my skills and explore new opportunities to contribute to innovative projects that make a positive impact on people's lives.</p>
+        </section>
+
+        <!-- About Me -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am a software engineer with a passion for creating intuitive and impactful applications. Connect with me on GitHub, LinkedIn, or visit my personal website to learn more about my projects and professional experience.</p>
+            <ul>
+                <li><a href="https://github.com/yourusername" rel="noopener" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" rel="noopener" target="_blank">LinkedIn</a></li>
+                <li><a href="https://yourwebsite.com" rel="noopener" target="_blank">Personal Website</a></li>
+            </ul>
+        </section>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-info">
+    
+    </footer>
+</div>
+    <!-- For JavaScript -->
+    <script src="/js/onload.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/ui.js"></script>
+
+</body>
+</html>

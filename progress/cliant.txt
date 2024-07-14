@@ -1,0 +1,1166 @@
+let ready = "no"; // Set page dispaly tracking ready state
+
+document.addEventListener('DOMContentLoaded', function() {
+    const getWeatherButton = document.getElementById('get-weather');
+    const celsiusToggle = document.getElementById('celsius');
+    const fahrenheitToggle = document.getElementById('fahrenheit');
+    let city = "null";
+    let isCelsius = true; // Flag to track the current temperature unit
+
+    // Initialize the function to set the landingPage to the info to user location
+    getUserLocation();
+    
+    // Function to toggle between Celsius and Fahrenheit
+    function toggleTemperatureUnit() {
+        // Toggle the temperature unit flag
+        isCelsius = !isCelsius;
+    
+        // Update temperature display for current weather
+        const currentTemperatureElement = document.querySelector('.hour-temperature');
+        const currentTemperature = parseFloat(currentTemperatureElement.textContent);
+        const updatedTemperature = convertTemperature(currentTemperature, isCelsius);
+        currentTemperatureElement.textContent = updatedTemperature.toFixed(2) + (isCelsius ? "°C" : "°F");
+    
+        // Update temperature display for next 12 hours
+        const hourTemperatureElements = document.querySelectorAll('.hour-info .hour-temperature');
+        hourTemperatureElements.forEach(element => {
+            const temperature = parseFloat(element.textContent);
+            const updatedTemperature = convertTemperature(temperature, isCelsius);
+            element.textContent = updatedTemperature.toFixed(2) + (isCelsius ? "°C" : "°F");
+        });
+    }
+    
+    // Function to convert temperature based on current unit
+    function convertTemperature(temperature, isCelsius) {
+        return isCelsius ? convertToFahrenheit(temperature) : convertToCelsius(temperature);
+    }
+    
+    // Function to convert Celsius to Fahrenheit
+    function convertToFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+    
+    // Function to convert Fahrenheit to Celsius
+    function convertToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+    
+    // Event listeners for toggle buttons
+    celsiusToggle.addEventListener('click', function() {
+        if (!isCelsius) {
+            toggleTemperatureUnit();
+        }
+    });
+    
+    fahrenheitToggle.addEventListener('click', function() {
+        if (isCelsius) {
+            toggleTemperatureUnit();
+        }
+    });
+    
+
+
+    setBackground('default');
+
+    getWeatherButton.addEventListener('click', getWeather);
+    
+    function getWeather() {
+        city = document.getElementById('city').value;
+        handleGetWeather(city);
+        pageController();    
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            city = document.getElementById('city').value;
+            handleGetWeather(city);
+            pageController();
+            
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            city = document.getElementById('city').value;
+            handleGetWeather(city);
+        }
+    });
+
+
+// Import Axios library if not already imported
+// You can import it using a script tag in HTML or import it if you're using a module bundler like Webpack
+// import axios from 'axios';
+
+function getUserLocation() {
+    // Assuming the URL to your server.js API endpoint
+    const serverUrl = 'http://localhost:3000';
+
+    // Make a request to server.js endpoint to get user's location
+    axios.get(`${serverUrl}/userlocation`)
+        .then(response => {
+            const data = response.data;
+
+            // Extract location data from the response
+            const city = data.city;
+            const country = data.country_name;
+            const latitude = data.latitude;
+            const longitude = data.longitude;
+
+            console.log('City:', city);
+            console.log('Country:', country);
+            console.log('Latitude:', latitude);
+            console.log('Longitude:', longitude);
+
+            // Call handleGetWeather with the location name
+            handleGetWeather(city);
+        })
+        .catch(error => {
+            console.error('Error fetching location data:', error);
+        });
+}
+
+
+
+    // Event listener for the View Features button
+    const viewFeaturesBtn = document.getElementById('viewFeaturesBtn');
+
+    // Function to show or hide videos
+    function toggleVideos() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.hidden = !video.hidden;
+            
+            if (video.hidden) {
+                video.pause(); // Pause the video if it's hidden
+            } else {
+                video.play(); // Play the video if it's shown
+            }
+        });
+
+        // Change button text based on video visibility
+        const buttonText = viewFeaturesBtn.textContent;
+        if (buttonText === 'View Features') {
+            viewFeaturesBtn.textContent = 'Hide Features';
+        } else {
+            viewFeaturesBtn.textContent = 'View Features';
+        }
+    }
+
+    viewFeaturesBtn.addEventListener('click', toggleVideos);
+
+    function handleGetWeather(city) {
+        // Assuming the URL to your server.js API endpoint
+        const serverUrl = 'http://localhost:3000';
+    
+        // Make a request to server.js endpoint passing the city
+        axios.get(`${serverUrl}/weather?city=${city}`)
+            .then(response => {
+                const data = response.data;
+ 
+                // Update current weather information
+                const todayWeatherInfo = document.querySelector('.today-weather-info');
+                const currentWeather = data.current;
+                const todayDate = new Date().toDateString();
+                const temperature = isCelsius ? currentWeather.temp_c : currentWeather.temp_f;
+                const temperatureUnit = isCelsius ? "°C" : "°F";
+
+                todayWeatherInfo.querySelector('.hour-temperature').textContent = `${temperature}${temperatureUnit}`;
+                todayWeatherInfo.querySelector('.hour-icon').src = currentWeather.condition.icon;
+                todayWeatherInfo.querySelector('.location-name').textContent = data.location.name + ',';
+                todayWeatherInfo.querySelector('.location-region');
+                // Assuming data is your object containing location information
+                if (data.location.region && countOccurrence(data.location.region, data.location.name) <= 0) {
+                    todayWeatherInfo.querySelector('.location-region').textContent = data.location.region + ',';
+                } else {
+                    todayWeatherInfo.querySelector('.location-region').hidden = true;
+                    console.log('Region name',data.location.region, 'same as location name hidden!');
+                }      
+                todayWeatherInfo.querySelector('.location-country').textContent = data.location.country;
+                todayWeatherInfo.querySelector('.date').textContent = todayDate;
+
+
+                // Display current time based on the location timezone
+                const timezone = data.location.tz_id;
+                const currentTime = new Date().toLocaleTimeString('en-US', {timeZone: timezone});
+                todayWeatherInfo.querySelector('.current-time').textContent = `Current Time: ${currentTime}`;
+
+                setBackground(data.current.condition.text);
+
+                // Function to calculate the hour offset for the forecast
+                function calculateHourOffset(currentHour) {
+                    const offset = (currentHour + 1) % 24; // Ensure it wraps around the 24-hour clock
+                    return offset;
+                }
+
+                // Update forecast information for the next 7 hours starting from the hour immediately following the current time
+                const forecastContainer = document.querySelector('.nownext12hoursinfo');
+                forecastContainer.innerHTML = ''; // Clear existing forecast data
+
+                // Add the current hour data (Now)
+                const currentHourEpoch = data.location.localtime_epoch;
+                const currentHourData = data.forecast.forecastday[0].hour.find(hourData => {
+                    const hourEpoch = hourData.time_epoch;
+                    return Math.abs(hourEpoch - currentHourEpoch) < 3600; // Check if the difference is within 1 hour (3600 seconds)
+                });
+
+                if (currentHourData) {
+                    const currentHourTime = new Date(currentHourData.time_epoch * 1000).toLocaleTimeString('en-US', {timeZone: timezone});
+                    const currentTemperature = isCelsius ? currentHourData.temp_c : currentHourData.temp_f;
+                    const currentTemperatureUnit = isCelsius ? "°C" : "°F";
+                    
+                    const currentHourElement = document.createElement('div');
+                    currentHourElement.classList.add('hour-info');
+                    currentHourElement.innerHTML = `
+                        <p class="placeHourDateTime">Now</p>
+                        <div class="timeInformation">
+                            <!-- <p class="placeHourDateTime">${currentHourTime}</p>  Display current time here -->
+                            <img class="hour-icon" src="${currentHourData.condition.icon}" alt="Weather Icon">
+                            <h5 class="hour-temperature">${currentTemperature}${currentTemperatureUnit}</h5>
+                        </div>
+                    `;
+                    forecastContainer.appendChild(currentHourElement);
+                }
+
+                // Add forecast for the next 12 hours
+                const currentTimeEpoch = data.location.localtime_epoch; // Local time provided by the API
+                for (let i = 1; i <= 12; i++) {
+                    const nextHourEpoch = currentTimeEpoch + i * 3600; // Increment by 3600 seconds (1 hour)
+
+                    const nextHourTime = new Date(nextHourEpoch * 1000).toLocaleTimeString('en-US', {timeZone: timezone});
+                    const nextHourData = data.forecast.forecastday[0].hour.find(hourData => {
+                        const hourEpoch = hourData.time_epoch;
+                        return Math.abs(hourEpoch - nextHourEpoch) < 3600; // Check if the difference is within 1 hour (3600 seconds)
+                    });
+
+                    if (nextHourData) {
+                        const hourElement = document.createElement('div');
+                        hourElement.classList.add('hour-info');
+                        hourElement.innerHTML = `
+                            <p class="placeHourDateTime">${nextHourTime}</p>
+                            <div class="timeInformation">
+                                <img class="hour-icon" src="${nextHourData.condition.icon}" alt="Weather Icon">
+                                <h5 class="hour-temperature">${isCelsius ? nextHourData.temp_c : nextHourData.temp_f}${temperatureUnit}</h5>
+                            </div>
+                        `;
+                        forecastContainer.appendChild(hourElement);
+                    }
+                }
+
+                // Add weather details
+                const weatherDetailsContainer = document.querySelector('.weather-details');
+                weatherDetailsContainer.innerHTML = ''; // Clear existing weather details
+
+            // Extracting the pieces of information
+            const weatherDetails = [
+                { title: 'Sunrise', info: data.forecast.forecastday[0].astro.sunrise, icon: icons.sunrise },
+                { title: 'Sunset', info: data.forecast.forecastday[0].astro.sunset, icon: icons.sunset },
+                { title: 'Precipitation', info: `${data.current.precip_mm} mm (${data.current.precip_in} in)`, icon: icons.precipitation },
+                { title: 'Humidity', info: `${data.current.humidity}%`, icon: icons.humidity },
+                { title: 'Wind', info: `${data.current.wind_kph} km/h (${data.current.wind_mph} mph) ${data.current.wind_dir}`, icon: icons.wind },
+                { title: 'Pressure', info: `${data.current.pressure_mb} mb (${data.current.pressure_in} in)`, icon: icons.pressure },
+                { title: 'Feels Like', info: `${data.current.feelslike_c}°C (${data.current.feelslike_f}°F)`, icon: icons.feelsLike },
+                { title: 'Visibility', info: `${data.current.vis_km} km (${data.current.vis_miles} miles)`, icon: icons.visibility },
+                { title: 'Weather Description', info: data.current.condition.text, icon: currentHourData.condition.icon },
+                { title: 'UV Index', info: data.current.uv, icon: icons.uvIndex },
+                { title: 'Cloud Cover', info: `${data.current.cloud}%`, icon: icons.cloudCover },
+                { title: 'Dew Point', info: `${data.current.dewpoint_c}°C (${data.current.dewpoint_f}°F)`, icon: icons.dewPoint },
+                { title: 'Moonrise', info: data.forecast.forecastday[0].astro.moonrise, icon: icons.moonrise },
+                { title: 'Moonset', info: data.forecast.forecastday[0].astro.moonset, icon: icons.moonset },
+                { title: 'Moon Phase', info: data.forecast.forecastday[0].astro.moon_phase, icon: icons.moonPhase },
+                { title: 'Heat Index', info: `${data.current.heatindex_c}°C (${data.current.heatindex_f}°F)`, icon: icons.heatIndex },
+                { title: 'Solar Radiation', info: `${data.current.solarradiation} W/m²`, icon: icons.solarRadiation },
+            
+                // Add more weather details as needed
+            ];
+
+            // Loop through each weather detail and create HTML elements
+            weatherDetails.forEach(detail => {
+                if (detail.title !== 'Weather Description') {
+                    // Create HTML elements for other weather details
+                    console.log("Icon URL:", detail.icon); // Log the icon URL
+                    const detailElement = document.createElement('div');
+                    detailElement.classList.add('detail-info');
+                    detailElement.innerHTML = `
+                        <p class="detailsTitle">${detail.title}</p>
+                        <div class="detail-content">
+                            <h5 class="detailinfo">${detail.info}</h5>
+                            <span class="material-symbols-outlined">${detail.icon}</span>
+                        </div>
+                    `;
+                    // Append the detail to weatherDetailsContainer
+                    weatherDetailsContainer.appendChild(detailElement);
+                }
+            });
+
+            
+            // Find the index of the 'Visibility' detail
+            const visibilityIndex = weatherDetails.findIndex(detail => detail.title === 'Visibility');
+
+            // Find the weather description detail
+            const weatherDescription = weatherDetails.find(detail => detail.title === 'Weather Description');
+            const explanation = getWeatherDefinition(weatherDescription.info);
+            console.log("Explanation:", explanation);
+
+
+            if (weatherDescription) {
+                const weatherDescriptionElement = document.createElement('div');
+                weatherDescriptionElement.classList.add('weatherDescription');
+                weatherDescriptionElement.innerHTML = `
+                    <h2 class="weatherdetailsTitle">${weatherDescription.title}</h2>
+                    <div class="theweatherbox">
+                        <div class="locationname">
+                            <h4 class="location-name">${data.location.name}</h4>
+                            <h4 class="location-region"></h4>
+                            <h4 class="location-country">${data.location.country}</h4>
+                        </div>
+                        <div class="boxsizingmain">
+                            <h4 class="titleName">${weatherDescription.info}</h4>
+                            <img class="hour-iconweather" src="${weatherDescription.icon}" alt="Weather Icon">
+                        </div>
+                        <p class="descriptionexplain">${explanation}</p>
+                    </div>
+                    <div id="regionMap">
+                        <div id="map"></div>
+                    </div>
+                `;
+
+                // Define location detail elements
+                const regiondetail = document.querySelector('.location-region');
+
+                // Assuming data is your object containing location information
+                if (data.location.region && countOccurrence(data.location.region, data.location.name) <= 0) {
+                    regiondetail.hidden = true;
+                } else {
+                    regiondetail.textContent = data.location.region + ',';
+                }          
+
+                // Insert the weatherDescription div after the visibility detail
+                if (visibilityIndex !== -1) {
+                    const visibilityDetail = document.querySelectorAll('.detail-info')[visibilityIndex];
+                    const parentContainer = visibilityDetail.parentNode;
+                    // Set up styling for the first 8 details to display as a block with 4 details per row
+                    parentContainer.style.display = 'grid';
+                    parentContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+                    parentContainer.style.gridGap = '20px'; // Adjust as needed
+                    // Set the visibility detail to retain its original width
+                    visibilityDetail.style.gridColumn = 'auto';
+                    // Insert the weather description element
+                    parentContainer.insertBefore(weatherDescriptionElement, visibilityDetail.nextSibling);
+                    // Set the weather description to span full width
+                    weatherDescriptionElement.style.gridColumn = '1 / span 4';
+                } else {
+                    // If visibility detail is not found, append the weatherDescription div to the end
+                    weatherDetailsContainer.appendChild(weatherDescriptionElement);
+                }
+
+            }
+
+            // Set dimensions for the map div
+            const mapElement = document.getElementById('map');
+            mapElement.style.width = '750px'; // Example width
+            mapElement.style.height = '400px'; // Example height
+            
+            // Weatherapi may goes here
+            // Initialize the Leaflet map within the 2D map div
+            const map = L.map(mapElement).setView([data.location.lat, data.location.lon], 10);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data © OpenStreetMap contributors'
+            }).addTo(map);
+            
+            L.marker([data.location.lat, data.location.lon]).addTo(map);
+            
+
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    }
+
+    // Update weather every 12 hours
+    setInterval(() => {
+        getWeatherButton.click();
+    }, 1000 * 60 * 60 * 12); // 12 hours in milliseconds
+    
+    ready = "yes";
+    webpage();
+});
+
+const descriptionPage = document.getElementById('pageDescription');
+const page = document.querySelector('.page');
+const features = document.querySelector('.features-container');
+const loader = document.querySelector('.loader');
+
+
+function pageController() {
+    // Remove the 'hidden' attribute from the 'page' element
+    descriptionPage.removeAttribute('hidden');
+    features.hidden = true;   
+}
+
+
+// Function to show the section corresponding to the hash
+function showSectionFromHash() {
+    // console.log('condition of weather ', currentCondition);
+    setBackground('sunny');
+    // Get the hash (identifier) from the URL
+    const hash = window.location.hash;
+
+    // Remove the "#" from the hash
+    const sectionId = hash.substring(1);
+
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the section corresponding to the hash
+    if (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.style.display = 'block';
+        }
+    }
+}
+
+// Call the function when the page loads
+window.addEventListener('load', showSectionFromHash);
+
+// Call the function when the hash changes
+window.addEventListener('hashchange', showSectionFromHash);
+
+
+// function aboutSection() {
+//     // Hide features and show about page
+//     // features.hidden = true;
+//     aboutpage.hidden = false;
+
+//     // Scroll to the top of the page instantly
+//     window.scrollTo(0, 0);
+// }
+
+function webpage() {
+    if (ready === "yes") {
+    setTimeout(function() {
+        page.style.display = 'block';
+    }, 400); // Delay for one second (1000 milliseconds)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+___________------------------------------------_________________________________--__________________-----------------------
+
+
+
+let noLocationData = true; // Set location data tracker to regulate getUserLocation
+
+// Import Axios library if not already imported
+// You can import it using a script tag in HTML or import it if you're using a module bundler like Webpack
+// import axios from 'axios';
+
+const descriptionPage = document.getElementById('pageDescription');
+const features = document.querySelector('.features-container');
+
+
+function pageController() {
+    // Remove the 'hidden' attribute from the 'page' element
+    descriptionPage.removeAttribute('hidden');
+    features.hidden = true;   
+}
+
+function getUserLocation() {
+    // Assuming the URL to your server.js API endpoint
+    const serverUrl = 'http://localhost:3000';
+
+    // Return a promise to handle the asynchronous operation
+    // return new Promise((resolve, reject) => {
+        axios.get(`${serverUrl}/userlocation`)
+            .then(response => {
+                const data = response.data;
+
+                // Extract location data from the response
+                const city = data.city;
+                const country = data.country_name;
+                const latitude = data.latitude;
+                const longitude = data.longitude;
+
+                console.log('City:', city);
+                console.log('Country:', country);
+                console.log('Latitude:', latitude);
+                console.log('Longitude:', longitude);
+
+                // Resolve the promise with the location data
+                //resolve({ city, country, latitude, longitude });
+            })
+            .catch(error => {
+                console.error('Error fetching location data:', error);
+                // Reject the promise if there's an error
+                //reject(error);
+            });
+    //});
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const page = document.querySelector('.page');
+    const getWeatherButton = document.getElementById('get-weather');
+    const celsiusToggle = document.getElementById('celsius');
+    const fahrenheitToggle = document.getElementById('fahrenheit');
+    const map2D = document.getElementById('2Dmap');
+    const map3D = document.getElementById('3Dmap');
+    let city = null;
+    let isCelsius = true; // Flag to track the current temperature unit
+    let isclicked = 'none'; // Flag to track the current degrees
+    let initialCity = '';
+    const serverUrl = 'http://localhost:3000';
+    // Define the filename and content for reading JSON file
+    let filename = 'location';
+    let content = ['city'];
+    
+    // Initialize the function to set the landingPage to the info to user location
+    if (noLocationData == true) {
+        getUserLocation();
+
+    // Make a request to read the JSON file for initial city
+    axios.get(`${serverUrl}/readJsonFile`, { params: { filename, content } })
+        .then(response => {
+            // Extract the initial city from the response data
+            initialCity = response.data;
+            console.log('City name form location.json:', initialCity);
+            noLocationData = false;
+            handleGetWeather(initialCity);
+        })
+        .catch(error => {
+            console.error('Error fetching JSON content:', error);
+        });
+    
+    } else {
+
+        // Make a request to read the JSON file for initial city
+        axios.get(`${serverUrl}/readJsonFile`, { params: { filename, content } })
+            .then(response => {
+                // Extract the initial city from the response data
+              initialCity = response.data;
+              console.log('City name form location.json:', initialCity, 'call made cause noLocationData == false');
+              // Call handleGetWeather with the initial city
+              handleGetWeather(initialCity);
+            })
+            .catch(error => {
+                console.error('Error fetching JSON content:', error);
+            });
+    }  
+    
+    // Function to toggle between Celsius and Fahrenheit
+    function toggleTemperatureUnit() {
+        // Toggle the temperature unit flag
+        isCelsius = !isCelsius;
+
+        // Update temperature display for current weather
+        const currentTemperatureElement = document.querySelector('.hour-temperature');
+        const currentTemperature = parseFloat(currentTemperatureElement.textContent);
+        const updatedTemperature = convertTemperature(currentTemperature, isCelsius);
+        currentTemperatureElement.textContent = updatedTemperature.toFixed(2) + (isCelsius ? "°C" : "°F");
+
+        // Update temperature display for next 12 hours
+        const hourTemperatureElements = document.querySelectorAll('.hour-info .hour-temperature');
+        hourTemperatureElements.forEach(element => {
+            const temperature = parseFloat(element.textContent);
+            const updatedTemperature = convertTemperature(temperature, isCelsius);
+            element.textContent = updatedTemperature.toFixed(2) + (isCelsius ? "°C" : "°F");
+        });
+    }
+
+    // Function to convert temperature based on current unit
+    function convertTemperature(temperature, isCelsius) {
+        return isCelsius ? convertToCelsius(temperature) : convertToFahrenheit(temperature);
+    }
+
+    // Function to convert Celsius to Fahrenheit
+    function convertToFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+
+    // Function to convert Fahrenheit to Celsius
+    function convertToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+
+    // Event listeners for toggle buttons
+    celsiusToggle.addEventListener('click', function() {
+        if (!isCelsius) {
+            toggleTemperatureUnit();
+        }
+    });
+
+    fahrenheitToggle.addEventListener('click', function() {
+        if (isCelsius) {
+            toggleTemperatureUnit();
+        }
+    });
+
+
+    getWeatherButton.addEventListener('click', getWeather);
+    
+    function getWeather() {
+        city = document.getElementById('city').value;
+        if (city) {
+            handleGetWeather(city);
+            pageController();   
+        } 
+    }
+
+    document.addEventListener('keydown', function(event) {
+        const city = document.getElementById('city').value.trim(); // Trim whitespace
+        if (event.key === 'Enter' && city) {
+            handleGetWeather(city);
+            pageController();
+        }
+    });
+
+    // Event listener for the View Features button
+    const viewFeaturesBtn = document.getElementById('viewFeaturesBtn');
+
+    // Function to show or hide videos
+    function toggleVideos() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.hidden = !video.hidden;
+            
+            if (video.hidden) {
+                video.pause(); // Pause the video if it's hidden
+            } else {
+                video.play(); // Play the video if it's shown
+            }
+        });
+
+        // Change button text based on video visibility
+        const buttonText = viewFeaturesBtn.textContent;
+        if (buttonText === 'View Features') {
+            viewFeaturesBtn.textContent = 'Hide Features';
+        } else {
+            viewFeaturesBtn.textContent = 'View Features';
+        }
+    }
+    
+
+    viewFeaturesBtn.addEventListener('click', toggleVideos);
+
+    // Function to get the weather data for the current city
+    function handleGetWeather(city) {
+        // Define the URL of the server API endpoint
+        const serverUrl = 'http://localhost:3000';
+        
+        // Make a GET request to the server API endpoint with the city as a query parameter
+        axios.get(`${serverUrl}/weather?city=${city}`)
+            .then(response => {
+                // Extract the data from the response object
+                const data = response.data;
+                
+                // Call the function to update the weather display with the received data
+                updateWeatherDisplay(data);
+                setBackground(data.current.condition.text, page);
+            })
+            .catch(error => {
+                // Log an error message if the request fails
+                if (error.response && error.response.status === 500) {
+                    const errorDiv = document.getElementById('error');
+                    const onlandDiv = document.getElementById('onland');
+                    errorDiv.innerHTML = `<img src="assets/notFound/noLocationFound.webp" style="width: 300px; height: 300px;">`;
+                    errorDiv.hidden = false;
+                    onlandDiv.hidden = true;
+                } else {
+                    console.error('Error fetching weather data:', error);
+                }
+            });
+    }
+
+function updateWeatherDisplay(data) {
+            // Update current weather information
+            const todayWeatherInfo = document.querySelector('.today-weather-info');
+            const currentWeather = data.current;
+            const todayDate = new Date().toDateString();
+            const temperature = isCelsius ? currentWeather.temp_c : currentWeather.temp_f;
+            const temperatureUnit = isCelsius ? "°C" : "°F";
+
+            todayWeatherInfo.querySelector('.hour-temperature').textContent = `${temperature}${temperatureUnit}`;
+            todayWeatherInfo.querySelector('.hour-icon').src = currentWeather.condition.icon;
+            todayWeatherInfo.querySelector('.location-name').textContent = data.location.name + ',';
+            todayWeatherInfo.querySelector('.location-region');
+            // Assuming data is your object containing location information
+            if (data.location.region && countOccurrence(data.location.region, data.location.name) <= 0) {
+                todayWeatherInfo.querySelector('.location-region').textContent = data.location.region + ',';
+            } else {
+                todayWeatherInfo.querySelector('.location-region').hidden = true;
+                console.log('Region name',data.location.region, 'same as location name hidden!');
+            }      
+            todayWeatherInfo.querySelector('.location-country').textContent = data.location.country;
+            todayWeatherInfo.querySelector('.date').textContent = todayDate;
+
+
+            // Display current time based on the location timezone
+            const timezone = data.location.tz_id;
+            const currentTime = new Date().toLocaleTimeString('en-US', {timeZone: timezone});
+            todayWeatherInfo.querySelector('.current-time').textContent = `Current Time: ${currentTime}`;
+
+            // Function to calculate the hour offset for the forecast
+            function calculateHourOffset(currentHour) {
+                const offset = (currentHour + 1) % 24; // Ensure it wraps around the 24-hour clock
+                return offset;
+            }
+
+            // Update forecast information for the next 7 hours starting from the hour immediately following the current time
+            const forecastContainer = document.querySelector('.nownext12hoursinfo');
+            forecastContainer.innerHTML = ''; // Clear existing forecast data
+
+            // Add the current hour data (Now)
+            const currentHourEpoch = data.location.localtime_epoch;
+            const currentHourData = data.forecast.forecastday[0].hour.find(hourData => {
+                const hourEpoch = hourData.time_epoch;
+                return Math.abs(hourEpoch - currentHourEpoch) < 3600; // Check if the difference is within 1 hour (3600 seconds)
+            });
+
+            if (currentHourData) {
+                const currentHourTime = new Date(currentHourData.time_epoch * 1000).toLocaleTimeString('en-US', {timeZone: timezone});
+                const currentTemperature = isCelsius ? currentHourData.temp_c : currentHourData.temp_f;
+                const currentTemperatureUnit = isCelsius ? "°C" : "°F";
+                
+                const currentHourElement = document.createElement('div');
+                currentHourElement.classList.add('hour-info');
+                currentHourElement.innerHTML = `
+                    <p class="placeHourDateTime">Now</p>
+                    <div class="timeInformation">
+                        <!-- <p class="placeHourDateTime">${currentHourTime}</p>  Display current time here -->
+                        <img class="hour-icon" src="${currentHourData.condition.icon}" alt="Weather Icon">
+                        <h5 class="hour-temperature">${currentTemperature}${currentTemperatureUnit}</h5>
+                    </div>
+                `;
+                forecastContainer.appendChild(currentHourElement);
+            }
+
+            // Add forecast for the next 12 hours
+            const currentTimeEpoch = data.location.localtime_epoch; // Local time provided by the API
+            for (let i = 1; i <= 12; i++) {
+                const nextHourEpoch = currentTimeEpoch + i * 3600; // Increment by 3600 seconds (1 hour)
+
+                const nextHourTime = new Date(nextHourEpoch * 1000).toLocaleTimeString('en-US', {timeZone: timezone});
+                const nextHourData = data.forecast.forecastday[0].hour.find(hourData => {
+                    const hourEpoch = hourData.time_epoch;
+                    return Math.abs(hourEpoch - nextHourEpoch) < 3600; // Check if the difference is within 1 hour (3600 seconds)
+                });
+
+                if (nextHourData) {
+                    const hourElement = document.createElement('div');
+                    hourElement.classList.add('hour-info');
+                    hourElement.innerHTML = `
+                        <p class="placeHourDateTime">${nextHourTime}</p>
+                        <div class="timeInformation">
+                            <img class="hour-icon" src="${nextHourData.condition.icon}" alt="Weather Icon">
+                            <h5 class="hour-temperature">${isCelsius ? nextHourData.temp_c : nextHourData.temp_f}${temperatureUnit}</h5>
+                        </div>
+                    `;
+                    forecastContainer.appendChild(hourElement);
+                }
+            }
+
+            // Add weather details
+            const weatherDetailsContainer = document.querySelector('.weather-details');
+            weatherDetailsContainer.innerHTML = ''; // Clear existing weather details
+
+        // Extracting the pieces of information
+        const weatherDetails = [
+            { title: 'Sunrise', info: data.forecast.forecastday[0].astro.sunrise, icon: icons.sunrise },
+            { title: 'Sunset', info: data.forecast.forecastday[0].astro.sunset, icon: icons.sunset },
+            { title: 'Precipitation', info: `${data.current.precip_mm} mm, (${data.current.precip_in} in`, icon: icons.precipitation },
+            { title: 'Humidity', info: `${data.current.humidity}%`, icon: icons.humidity },
+            { title: 'Wind', info: `${data.current.wind_kph} km/h, ${data.current.wind_mph} mph ${data.current.wind_dir}`, icon: icons.wind },
+            { title: 'Pressure', info: `${data.current.pressure_mb} mb, ${data.current.pressure_in} in`, icon: icons.pressure },
+            { title: 'Feels Like', info: `${data.current.feelslike_c}°C, ${data.current.feelslike_f}°F`, icon: icons.feelsLike },
+            { title: 'Visibility', info: `${data.current.vis_km} km, ${data.current.vis_miles} miles`, icon: icons.visibility },
+            { title: 'Weather Description', info: data.current.condition.text, icon: currentHourData.condition.icon },
+            { title: 'UV Index', info: data.current.uv, icon: icons.uvIndex },
+            { title: 'Cloud Cover', info: `${data.current.cloud}%`, icon: icons.cloudCover },
+            { title: 'Moonrise', info: data.forecast.forecastday[0].astro.moonrise, icon: icons.moonrise },
+            { title: 'Moonset', info: data.forecast.forecastday[0].astro.moonset, icon: icons.moonset },
+            { title: 'Will it Rain', info: data.forecast.forecastday[0].day.daily_will_it_rain ? 'Yes' : 'No', icon: icons.rain },
+            { title: 'Chance of Rain', info: `${data.forecast.forecastday[0].day.daily_chance_of_rain}%`, icon: icons.chanceOfRain },
+            { title: 'Will it Snow', info: data.forecast.forecastday[0].day.daily_will_it_snow ? 'Yes' : 'No', icon: icons.snow },
+            { title: 'Chance of Snow', info: `${data.forecast.forecastday[0].day.daily_chance_of_snow}%`, icon: icons.chanceOfSnow }
+        
+            // Add more weather details as needed
+        ];
+
+        // Loop through each weather detail and create HTML elements
+        weatherDetails.forEach(detail => {
+            if (detail.title !== 'Weather Description') {
+                // Create HTML elements for other weather details
+                console.log("Icon URL:", detail.icon); // Log the icon URL
+                const detailElement = document.createElement('div');
+                detailElement.classList.add('detail-info');
+                detailElement.innerHTML = `
+                    <p class="detailsTitle">${detail.title}</p>
+                    <div class="detail-content">
+                        <h5 class="detailinfo">${detail.info}</h5>
+                        <span class="material-symbols-outlined">${detail.icon}</span>
+                    </div>
+                `;
+                // <img class="detailImg" src="${detail.icon}" alt="Detail Icon">
+                // Append the detail to weatherDetailsContainer
+                weatherDetailsContainer.appendChild(detailElement);
+            }
+        });
+
+        
+        // Find the index of the 'Visibility' detail
+        const visibilityIndex = weatherDetails.findIndex(detail => detail.title === 'Visibility');
+
+        // Find the weather description detail
+        const weatherDescription = weatherDetails.find(detail => detail.title === 'Weather Description');
+        const explanation = getWeatherDefinition(weatherDescription.info);
+        console.log("Explanation:", explanation);
+
+
+        if (weatherDescription) {
+            const weatherDescriptionElement = document.createElement('div');
+            weatherDescriptionElement.classList.add('weatherDescription');
+            weatherDescriptionElement.innerHTML = `
+                <h2 class="weatherdetailsTitle">${weatherDescription.title}</h2>
+                <div class="theweatherbox">
+                    <div class="locationname">
+                        <h4 class="location-name">${data.location.name}</h4>
+                        <h4 class="location-region"></h4>
+                        <h4 class="location-country">${data.location.country}</h4>
+                    </div>
+                    <div class="toggletwo">
+                        <span id="threeDmapDetail" class="active">3D</span>
+                        <span id="twoDmapDetail" class="active">2D</span>
+                    </div>
+                    <div class="boxsizingmain">
+                        <h4 class="titleName">${weatherDescription.info}</h4>
+                        <img class="hour-iconweather" src="${weatherDescription.icon}" alt="Weather Icon">
+                    </div>
+                    <p class="descriptionexplain">${explanation}</p>
+                </div>
+                <div id="regionMap">
+                <div id="twodmap"></div>
+                <div id="threedmap"></div>
+                </div>
+            `;
+
+            // Define location detail elements
+            const regiondetail = document.querySelector('.location-region');
+
+            // Assuming data is your object containing location information
+            if (data.location.region && countOccurrence(data.location.region, data.location.name) <= 0) {
+                regiondetail.hidden = true;
+            } else {
+                regiondetail.textContent = data.location.region + ',';
+            }          
+
+            // Insert the weatherDescription div after the visibility detail
+            if (visibilityIndex !== -1) {
+                const visibilityDetail = document.querySelectorAll('.detail-info')[visibilityIndex];
+                const parentContainer = visibilityDetail.parentNode;
+                // Set up styling for the first 8 details to display as a block with 4 details per row
+                parentContainer.style.display = 'grid';
+                parentContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+                parentContainer.style.gridGap = '20px'; // Adjust as needed
+                // Set the visibility detail to retain its original width
+                visibilityDetail.style.gridColumn = 'auto';
+                // Insert the weather description element
+                parentContainer.insertBefore(weatherDescriptionElement, visibilityDetail.nextSibling);
+                // Set the weather description to span full width
+                weatherDescriptionElement.style.gridColumn = '1 / span 4';
+            } else {
+                // If visibility detail is not found, append the weatherDescription div to the end
+                weatherDetailsContainer.appendChild(weatherDescriptionElement);
+            }
+
+        }
+
+        // Set dimensions for the map div
+        const mapElement = document.getElementById('twodmap');
+        mapElement.style.width = '750px'; // Example width
+        mapElement.style.height = '400px'; // Example height
+        
+        // Weatherapi may goes here
+        // Initialize the Leaflet map within the 2D map div
+        const map = L.map(mapElement).setView([data.location.lat, data.location.lon], 10);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data © OpenStreetMap contributors'
+        }).addTo(map);
+        
+        L.marker([data.location.lat, data.location.lon]).addTo(map);
+
+        // Set dimensions for the 3D map div
+        const map3dElement = document.getElementById('threedmap');
+        map3dElement.style.width = '750px'; // Example width
+        map3dElement.style.height = '400px'; // Example height
+                    
+// Function to get the weather data for the current city
+function cesiumMap() {
+    // Define the URL of the server API endpoint
+    const serverUrl = 'http://localhost:3000';
+
+    axios.get(`${serverUrl}/cesiumMap`)
+    .then(response => {
+
+        const firstResponse = new Function(response.data);
+        console.log(response.data);
+
+        // Execute the dynamically created function and get the functionString
+        const firstPromise = firstResponse();
+        console.log(firstPromise);
+
+        // Check if the firstPromise is a promise
+        if (firstPromise instanceof Promise) {
+            // If it's a promise, wait for it to resolve
+            firstPromise.then(functionString => {
+                if (functionString) {
+                    const secondResponse = new Function(functionString);
+                    // Execute the dynamically created function and get the API key
+                    const apiKeyPromise = secondResponse();
+
+                    // Set the returned API key as the Cesium API key when the promise resolves
+                    apiKeyPromise.then(apiKey => {
+                        if (apiKey) {
+                            Cesium.Ion.defaultAccessToken = apiKey;
+                            console.log('Cesium API Key set:', apiKey);
+                            initializeCesiumMap();
+                        } else {
+                            console.error("Received undefined API key from the dynamic function.");
+                        }
+                    }).catch(error => {
+                        console.error('Error setting Cesium API Key:', error);
+                    });
+                } else {
+                    console.error("Received undefined functionString from the dynamic function.");
+                }
+            }).catch(error => {
+                console.error('Error executing firstResponse:', error);
+            });
+        } else {
+            console.error("firstResponse didn't return a promise.");
+        }
+    }).catch(error => {
+        console.error('Error fetching function:', error);
+    });
+}
+
+
+
+// Function to initialize the Cesium map
+function initializeCesiumMap() {
+    // Define the initial camera position
+    const initialCameraPosition = Cesium.Cartesian3.fromDegrees(data.location.lon, data.location.lat, 10000.0);
+    const homeCameraView = {
+        destination: initialCameraPosition,
+        orientation: {
+            heading: Cesium.Math.toRadians(0), // Adjust as needed
+            pitch: Cesium.Math.toRadians(-90), // Adjust as needed
+            roll: Cesium.Math.toRadians(0) // Adjust as needed
+        }
+    };
+
+    // Initialize the Cesium 3D map within the 3D map div
+    const viewer = new Cesium.Viewer('threedmap', {
+        terrainProvider: Cesium.createWorldTerrain(),
+        animation: false,  // Disable animation control
+        baseLayerPicker: true,  // Enable base layer picker
+        fullscreenButton: false,  // Disable fullscreen button
+        vrButton: false,  // Disable VR button
+        geocoder: false,  // Disable geocoder
+        homeButton: false,  // Disable home button
+        infoBox: false,  // Disable info box
+        sceneModePicker: true,  // Enable scene mode picker
+        selectionIndicator: false,  // Disable selection indicator
+        timeline: false,  // Disable timeline
+        navigationHelpButton: false,  // Disable navigation help button
+        navigationInstructionsInitiallyVisible: false  // Hide navigation instructions initially
+    });
+
+    // Fly the camera to the specified position
+    viewer.camera.flyTo({
+        destination: initialCameraPosition
+    });
+
+    // Create a new HTML element for the icon
+    const iconElement = document.createElement('div');
+    iconElement.innerHTML = `<img src="${icons.position}" width="48" height="48">`; // Adjust width and height as needed
+    iconElement.style.position = 'absolute';
+    iconElement.style.pointerEvents = 'none'; // Prevent the HTML element from capturing mouse events
+    iconElement.style.zIndex = '100'; // Ensure the HTML element is rendered above the map
+    iconElement.style.visibility = 'hidden'; // Initially hide the HTML element
+    iconElement.style.transition = 'visibility 0.001s, left 0.001s, top 0.001s'; // Faster transition for smoother movement
+
+    // Position the HTML element over the map at the specified location
+    const position = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(data.location.lon, data.location.lat),
+        billboard: {
+            show: false // Hide the billboard to prevent it from being displayed
+        }
+    });
+
+    // Add the HTML element to the map container
+    const mapContainer = viewer.canvas.parentElement;
+    mapContainer.appendChild(iconElement);
+
+    // Function to update the position and visibility of the HTML element
+    function updateIconPosition() {
+        const canvasPosition = viewer.scene.cartesianToCanvasCoordinates(position.position.getValue(viewer.clock.currentTime));
+        if (Cesium.defined(canvasPosition)) {
+            iconElement.style.left = `${canvasPosition.x - iconElement.offsetWidth / 2}px`; // Adjust position for center alignment
+            iconElement.style.top = `${canvasPosition.y - iconElement.offsetHeight}px`; // Adjust position for bottom alignment
+            iconElement.style.visibility = 'visible'; // Show the HTML element if it's within the view
+        } else {
+            iconElement.style.visibility = 'hidden'; // Hide the HTML element if it's out of view
+        }
+    }
+
+    // Update the position and visibility of the HTML element when the camera or map view changes
+    viewer.scene.preRender.addEventListener(() => {
+        updateIconPosition();
+    });
+
+    // Update the position and visibility when the window is resized
+    window.addEventListener('resize', () => {
+        updateIconPosition();
+    });
+
+    // Filter out problematic imagery layers
+    const excludedLayers = ['Sentinel-2', 'Blue Marble', 'Earth at night', 'Stamen Toner', 'Stamen Watercolor', 'ESRI World Street Map'];
+    const filteredImageryProviders = viewer.baseLayerPicker.viewModel.imageryProviderViewModels.filter(viewModel => {
+        return !excludedLayers.includes(viewModel.name);
+    });
+    viewer.baseLayerPicker.viewModel.imageryProviderViewModels = filteredImageryProviders;
+
+    // Add event listener to base layer picker if it's defined
+    if (viewer.baseLayerPicker && viewer.baseLayerPicker.viewModel) {
+        const selectedImageryProviderViewModelChanged = viewer.baseLayerPicker.viewModel.selectedImageryProviderViewModelChanged;
+        if (selectedImageryProviderViewModelChanged) {
+            selectedImageryProviderViewModelChanged.addEventListener(function() {
+                // Fly the camera to the initial position when a new base layer is selected
+                viewer.camera.flyTo({
+                    destination: initialCameraPosition,
+                    orientation: homeCameraView.orientation
+                });
+            });
+        }
+    } else {
+        console.error("Base layer picker or its view model is not available.");
+    }
+}
+
+        cesiumMap();
+
+
+        // Function to get the weather data for the current city
+function securitycheck() {
+    // Define the URL of the server API endpoint
+    const serverUrl = 'http://localhost:3000';
+
+    axios.get(`${serverUrl}/getActualApiKey`)
+    .then(response => {
+        // Execute the code as a function
+        console.log('haha the key is:', response.data);
+
+    })
+    .catch(error => {
+        console.error('Error fetching function:', error);
+    });
+}
+
+securitycheck();
+
+        const map2Ddetail = document.getElementById('twoDmapDetail');
+        const map3Ddetail = document.getElementById('threeDmapDetail');
+
+        // Function to switch between 2D and 3D maps
+        function callmap() {
+            if (isclicked === '2map') {
+                // Hide 3D map and show 2D map
+                document.getElementById('threedmap').style.display = 'none';
+                document.getElementById('twodmap').style.display = 'block';
+            } else if (isclicked === '3map') {
+                // Hide 2D map and show 3D map
+                document.getElementById('twodmap').style.display = 'none';
+                document.getElementById('threedmap').style.display = 'block';
+            } else {
+                // By default, show the 2D map
+                document.getElementById('threedmap').style.display = 'none';
+                document.getElementById('twodmap').style.display = 'block';
+
+            }
+        }
+    
+
+        // Event listener for the 2D map button click
+        map2D.addEventListener('click', function() {
+            isclicked = '2map';
+            // Call the callmap function after the event listeners are set up
+            callmap(); 
+        });
+
+        // Event listener for the 3D map button click
+        map3D.addEventListener('click', function() {
+            isclicked = '3map';
+            // Call the callmap function after the event listeners are set up
+            callmap(); 
+        });
+
+
+        // Event listener for both 2D map and detail button click
+        [map2D, map2Ddetail].forEach(element => {
+            element.addEventListener('click', function() {
+                isclicked = '2map';
+                console.log('Button clicked is', isclicked);
+                // Call the callmap function after the event listeners are set up
+                callmap(); 
+            });
+        });
+
+        // Event listener for both 3D map and detail button click
+        [map3D, map3Ddetail].forEach(element => {
+            element.addEventListener('click', function() {
+                isclicked = '3map';
+                console.log('Button clicked is', isclicked);
+                // Call the callmap function after the event listeners are set up
+                callmap(); 
+            });
+        });
+
+
+        // Call the callmap function after the event listeners are set up
+        callmap(); 
+
+        // Set the flex-basis of all .detail-info elements to 50% to make them span 2 columns
+        const detailInfoElements = document.querySelectorAll('.detail-info');
+        detailInfoElements.forEach(element => {
+            element.style.flexBasis = '50%';
+        });
+        
+    }
+
+    // Update weather every 12 hours
+    setInterval(() => {
+        getWeatherButton.click();
+    }, 1000 * 60 * 60 * 12); // 12 hours in milliseconds
+
+});

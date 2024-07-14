@@ -1,0 +1,194 @@
+const icons = {
+    sunrise: '\uf172',
+    sunset: '\ue1c6',
+    precipitation: '\ue798',
+    humidity: '\uf87e',
+    wind: '\uefd8',
+    pressure: '\ue69d',
+    feelsLike: '\uf077',
+    visibility: '\ue8f4',
+    uvIndex: '\ue518', // Placeholder for the UV Index icon
+    cloudCover: '\ue2be', // Placeholder for the Cloud Cover icon
+    dewPoint: '\uf879', // Placeholder for the Dew Point icon
+    moonrise: '\ue20c', // Placeholder for the Moonrise icon
+    moonset: '\uf036', // Placeholder for the Moonset icon
+    moonPhase: '\uf6c3', // Placeholder for the Moon Phase icon
+    airQualityIndex: '\uf077', // Placeholder for the Air Quality Index icon
+    heatIndex: '\uef55', // Placeholder for the Heat Index icon
+    solarRadiation: '\uec0f', // Placeholder for the Solar Radiation icon
+    position: '\ue0c8', // Position icon
+    // Add more icons as needed
+};
+
+function countOccurrence(mainPhrase, ...searchPhrases) {
+    // Initialize a variable to store the count
+    let count = 0;
+
+    // Loop through each search phrase
+    searchPhrases.forEach(phrase => {
+        // Use a regular expression to find all occurrences of the search phrase in the main phrase
+        const regex = new RegExp(phrase, 'gi');
+        const matches = mainPhrase.match(regex);
+        
+        // If matches are found, increment the count by the number of matches
+        if (matches) {
+            count += matches.length;
+        }
+    });
+
+    // Return the total count
+    return count;
+}
+
+
+// Function to set background color based on weather condition
+function setBackground(weatherCondition) {
+    const body = document.body;
+
+    // Define color mappings based on weather conditions using linear gradients
+    const colorMappings = {
+        'clear': 'linear-gradient(180deg, hsl(210, 70%, 60%), hsl(50, 100%, 70%))', // This gradient transitions from blue to yellow, indicating clear skies
+        'partly cloudy': 'linear-gradient(180deg, hsl(210, 73%, 33%), hsl(0, 7%, 84%), hsl(47, 8%, 77%), hsl(52, 73%, 47%)', // This gradient transitions from dark blue to dark gray to dark yellow for partly cloudy weather
+        'overcast': 'linear-gradient(180deg, hsl(0, 0%, 60%), hsl(0, 0%, 70%), hsl(0, 2%, 18%))', // Start with darker gray and transition to lighter gray for overcast weather
+        'cloudy': 'linear-gradient(180deg, hsl(0, 0%, 30%), hsl(0, 0%, 70%))', // Start with darker gray and transition to lighter gray for cloudy weather
+        'rain': 'linear-gradient(180deg, hsl(207, 75%, 42%), hsl(211, 28%, 42%))', // Start with darker blue and transition to lighter blue for rainy weather
+        'snow': 'linear-gradient(180deg, hsl(200, 30%, 50%), hsl(200, 20%, 85%))', // Start with darker white and transition to lighter white for snowy weather
+        'sunny': 'linear-gradient(180deg, hsl(59, 29%, 53%), hsl(200, 60%, 76%))', // Start with darker yellow and transition to lighter yellow for sunny weather
+        'fog': 'linear-gradient(180deg, hsl(0, 0%, 50%), hsl(0, 0%, 65%))', // Start with darker gray and transition to lighter gray for foggy weather
+        'Thundery outbreaks in nearby': 'linear-gradient(180deg, hsl(240, 50%, 40%), hsl(0, 0%, 40%), hsl(50, 67%, 42%))', // This gradient transitions from a slightly dark blue to a dark grayish-white, with a touch of yellow for lightning
+        'Thunderstorm': 'linear-gradient(180deg, hsl(240, 80%, 20%), hsl(240, 70%, 15%), hsl(0, 0%, 70%), hsl(0, 0%, 20%))', // Start with darker purple and transition to lighter purple for thunderstorm
+        'windy': 'linear-gradient(180deg, hsl(120, 70%, 50%), hsl(120, 50%, 60%))', // Start with darker green and transition to lighter green for windy weather
+        'haze': 'linear-gradient(180deg, hsl(60, 70%, 60%), hsl(60, 50%, 70%))', // Start with darker brown and transition to lighter brown for hazy weather
+        'smoke': 'linear-gradient(180deg, hsl(0, 0%, 10%), hsl(0, 0%, 20%))', // Start with darker gray and transition to lighter gray for smokey weather
+        'dust': 'linear-gradient(180deg, hsl(30, 90%, 60%), hsl(30, 70%, 65%))', // Start with darker orange and transition to lighter orange for dusty weather
+        'tornado': 'linear-gradient(180deg, hsl(0, 100%, 10%), hsl(0, 100%, 20%))', // Start with darker black and transition to lighter black for tornado weather
+        'sandstorm': 'linear-gradient(180deg, hsl(40, 90%, 60%), hsl(40, 90%, 70%))', // Start with darker sand color and transition to lighter sand color for sandstorm
+        'hail': 'linear-gradient(180deg, hsl(240, 50%, 30%), hsl(240, 30%, 45%))', // Start with darker cyan and transition to lighter cyan for hail weather
+        'blizzard': 'linear-gradient(180deg, hsl(200, 30%, 70%), hsl(200, 10%, 85%))', // Start with darker blue and transition to lighter blue for blizzard weather
+        'drizzle': 'linear-gradient(180deg, hsl(210, 50%, 50%), hsl(210, 40%, 65%))', // Start with darker blue and transition to lighter blue for drizzle weather
+        'sleet': 'linear-gradient(180deg, hsl(215, 94%, 82%), hsl(200, 56%, 47%), hsl(200, 42%, 42%), hsl(201, 29%, 28%))', // Start with darker blue and transition to lighter blue for sleet weather
+        'freezing rain': 'linear-gradient(180deg, hsl(210, 40%, 50%), hsl(210, 30%, 60%))', // Start with darker blue and transition to lighter blue for freezing rain weather
+        'icy': 'linear-gradient(180deg, hsl(240, 10%, 85%), hsl(240, 5%, 95%))', // Start with darker blue and transition to lighter blue for icy weather
+        'squall': 'linear-gradient(180deg, hsl(240, 70%, 40%), hsl(240, 50%, 65%))', // Start with darker blue and transition to lighter blue for squall weather
+        'tropical storm': 'linear-gradient(180deg, hsl(240, 70%, 40%), hsl(240, 50%, 65%))', // Start with darker blue and transition to lighter blue for tropical storm weather
+        'ash': 'linear-gradient(180deg, hsl(0, 0%, 20%), hsl(0, 0%, 40%), hsl(0, 0%, 60%))', // This gradient transitions from darker shades to lighter shades of gray
+        'volcanic eruption': 'linear-gradient(180deg, hsl(0, 0%, 10%), hsl(0, 0%, 25%))', // Start with darker gray and transition to lighter gray for volcanic eruption weather
+        'rainbow': 'linear-gradient(180deg, hsl(0, 100%, 30%), hsl(360, 100%, 70%))', // Start with darker rainbow colors and transition to lighter rainbow colors for rainbow weather
+        'meteor shower': 'linear-gradient(180deg, hsl(240, 60%, 40%), hsl(240, 30%, 70%))', // Start with darker blue and transition to lighter blue for meteor shower weather
+        'patchy light rain with thunder': 'linear-gradient(180deg, hsl(210, 70%, 60%), hsl(0, 0%, 70%), hsl(50, 100%, 70%))', // Blue to gray to yellow for patchy light rain with thunder
+        'mist': 'linear-gradient(180deg, hsl(210, 70%, 60%), hsl(0, 0%, 70%), hsl(50, 100%, 70%))', // Blue to gray to yellow for patchy light rain with
+        'light sleet': 'linear-gradient(180deg, hsl(215, 94%, 82%), hsl(200, 99%, 71%), hsl(200, 55%, 57%), hsl(200, 34%, 23%))' // This gradient starts with a light shade of blue (Hue: 200), gradually darkens to represent the sleet, and ends with a darker shade of blue.
+
+        // Add more weather conditions and their corresponding colors as needed
+    };
+
+    let maxKeywordsCount = 0;
+    let matchingColor = '';
+    
+    // Loop through color mappings and find the one with the most matched keywords
+    for (const condition in colorMappings) {
+        const keywords = condition.toLowerCase().split(' '); // Split condition into keywords
+        let keywordsCount = 0;
+    
+        // Count occurrence of each keyword in the weather condition
+        keywords.forEach(keyword => {
+            if (weatherCondition.toLowerCase().includes(keyword)) {
+                keywordsCount++;
+            }
+        });
+    
+        // Update matchingColor if more keywords are matched
+        if (keywordsCount > maxKeywordsCount) {
+            maxKeywordsCount = keywordsCount;
+            matchingColor = colorMappings[condition];
+        }
+    }
+
+    // Set background color based on weather condition or default to light blue if no specific condition is found
+    if (maxKeywordsCount > 0) {
+        // If any weather condition keyword is found, set background color based on the most matched keywords
+        body.style.backgroundImage = matchingColor;
+    } else {
+        // If no specific condition is found, default to light blue
+        document.body.style.backgroundImage = 'linear-gradient(to bottom, #fff, #fff)';
+    }
+}
+
+// // Select the logo div
+// const logoDiv = document.getElementById('logo');
+
+// // SVG content as a string
+// const svgContent = `
+// <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M58.585 35.762L65.06 36.16 59.023 38.541A27 27 0 0 0 58.585 35.762M57.405 31.785L63.86 31.166 58.273 34.459A26 26 0 0 0 57.405 31.785M55.613 28.042L61.895 26.42 56.891 30.547A26 26 0 0 0 55.613 28.042M53.269 24.641L67.138 17.415 55.206 27.365A26 26 0 0 0 53.269 24.641M49.974 21.247L72.151 2.261 52.765 24.038A27 27 0 0 0 49.974 21.247M46.745 18.867L58.179 5.559 49.489 20.84A26 26 0 0 0 46.745 18.867M43.464 17.119L49.753 7.788 45.969 18.397A27 27 0 0 0 43.464 17.119M39.552 15.738L43.558 7.922 42.227 16.606A26 26 0 0 0 39.552 15.738M35.471 14.989L37.852 8.951 38.249 15.426A26 26 0 0 0 35.471 14.989M31.323 14.886L32.731 8.549 34.138 14.886A27 27 0 0 0 31.323 14.886M27.212 15.426L27.61 8.951 29.991 14.989A27 27 0 0 0 27.212 15.426M23.235 16.606L22.616 10.151 25.91 15.738C24.999 15.98 24.106 16.271 23.235 16.606M19.493 18.398L17.872 12.116 21.999 17.119C21.138 17.502 20.302 17.929 19.493 18.398M16.078 20.754L13.492 14.8 18.353 19.098A27 27 0 0 0 16.078 20.754M13.073 23.612L9.587 18.135 15.064 21.621A27 27 0 0 0 13.073 23.612M10.549 26.903L6.251 22.041 12.205 24.627A27 27 0 0 0 10.549 26.903M8.57 30.547L3.567 26.42 9.848 28.042A27 27 0 0 0 8.57 30.547M7.188 34.459L1.602 31.165 8.057 31.784A27 27 0 0 0 7.188 34.459M6.44 38.541L0.403 36.16 6.878 35.761C6.685 36.671 6.538 37.599 6.44 38.541M6.337 42.688L0 41.28 6.337 39.872A26 26 0 0 0 6.337 42.688M6.878 46.799L0.403 46.4 6.44 44.02C6.538 44.961 6.685 45.889 6.878 46.799M8.058 50.775L1.602 51.394 7.189 48.1C7.432 49.013 7.722 49.905 8.058 50.775M9.849 54.518L3.567 56.14 8.57 52.013C8.952 52.873 9.38 53.709 9.849 54.518M9.483 56.862L10.548 55.657C10.637 55.795 10.728 55.931 10.819 56.066 10.36 56.311 9.914 56.576 9.483 56.862" fill="#ffffff" data-fill-palette-color="quaternary"></path><path d="M9.914 41.28C9.914 28.678 20.13 18.463 32.731 18.463 45.17 18.463 55.284 28.417 55.543 40.794A22.7 22.7 0 0 0 48.554 45.794 20.2 20.2 0 0 0 42.628 44.912C34.829 44.912 28.066 49.321 24.686 55.78A15.4 15.4 0 0 0 18.038 54.28 15.5 15.5 0 0 0 14.303 54.735 22.7 22.7 0 0 1 9.914 41.28" fill="#ffffff" data-fill-palette-color="quaternary"></path><path d="M83.893 59.657A10.96 10.96 0 0 1 88.992 58.408C95.072 58.408 100.001 63.336 100.001 69.417 100.001 71.146 99.603 72.781 98.893 74.238H79.091L79.042 74.136 78.95 74.238H7.092A11.8 11.8 0 0 1 6.205 69.735C6.205 63.201 11.503 57.903 18.037 57.903 21.321 57.903 24.292 59.241 26.436 61.401 28.135 54.03 34.741 48.534 42.627 48.534 45.143 48.534 47.527 49.093 49.664 50.093 53.126 45.406 58.689 42.366 64.963 42.366 74.882 42.367 83.026 49.964 83.893 59.657" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M52.361 78.836C52.703 77.696 55.922 73.659 55.976 73.659 55.996 73.659 56.829 77.696 56.487 78.836S54.944 80.898 53.805 80.898 52.02 79.975 52.361 78.836" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M57.251 84.268C57.593 83.129 60.812 79.092 60.866 79.092 60.886 79.092 61.718 83.129 61.376 84.268S59.833 86.331 58.694 86.331 56.909 85.407 57.251 84.268" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M65.399 78.836C65.741 77.696 68.96 73.659 69.014 73.659 69.034 73.659 69.866 77.696 69.524 78.836S67.982 80.898 66.842 80.898C65.704 80.898 65.058 79.975 65.399 78.836" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M70.288 84.268C70.63 83.129 73.849 79.092 73.904 79.092 73.924 79.092 74.756 83.129 74.414 84.268S72.872 86.331 71.732 86.331 69.946 85.407 70.288 84.268" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M78.438 78.836C78.78 77.696 81.999 73.659 82.054 73.659 82.074 73.659 82.906 77.696 82.564 78.836S81.021 80.898 79.882 80.898 78.096 79.975 78.438 78.836" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M83.327 84.268C83.669 83.129 86.888 79.092 86.942 79.092 86.962 79.092 87.794 83.129 87.452 84.268S85.91 86.331 84.77 86.331C83.632 86.331 82.985 85.407 83.327 84.268" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M91.476 78.836C91.818 77.696 95.037 73.659 95.091 73.659 95.111 73.659 95.943 77.696 95.602 78.836 95.26 79.975 94.06 80.898 92.92 80.898S91.134 79.975 91.476 78.836" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M53.828 95.676C54.17 94.537 57.389 90.5 57.444 90.5 57.463 90.5 58.295 94.537 57.954 95.676 57.612 96.817 56.411 97.739 55.272 97.739S53.486 96.816 53.828 95.676" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M61.978 90.244C62.32 89.104 65.539 85.068 65.593 85.068 65.613 85.068 66.445 89.104 66.103 90.244 65.761 91.383 64.56 92.306 63.421 92.306S61.635 91.383 61.978 90.244" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M66.866 95.676C67.208 94.537 70.427 90.5 70.481 90.5 70.501 90.5 71.333 94.537 70.991 95.676 70.649 96.817 69.449 97.739 68.309 97.739 67.171 97.739 66.524 96.816 66.866 95.676" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M75.015 90.244C75.357 89.104 78.576 85.068 78.631 85.068 78.651 85.068 79.483 89.104 79.141 90.244 78.799 91.383 77.599 92.306 76.459 92.306S74.673 91.383 75.015 90.244" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M79.904 95.676C80.246 94.537 83.465 90.5 83.52 90.5 83.54 90.5 84.372 94.537 84.03 95.676 83.688 96.817 82.487 97.739 81.348 97.739S79.562 96.816 79.904 95.676" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M88.054 90.244C88.396 89.104 91.615 85.068 91.669 85.068 91.689 85.068 92.521 89.104 92.179 90.244 91.837 91.383 90.636 92.306 89.497 92.306S87.712 91.383 88.054 90.244" fill="#ffffff" data-fill-palette-color="quaternary"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M95.223 42.765L93.278 42.422 94.828 41.337C95.447 40.903 95.598 40.05 95.164 39.431L95.092 39.328A1.37 1.37 0 0 0 93.186 38.992L89.191 41.789 85.567 41.15 88.122 38.314 92.993 38.059A1.37 1.37 0 0 0 94.288 36.621L94.281 36.496A1.37 1.37 0 0 0 92.843 35.201L90.954 35.3 92.276 33.832A1.37 1.37 0 0 0 92.174 31.899L92.08 31.816 92.016 31.758A1.37 1.37 0 0 0 90.083 31.859L88.732 33.359 88.627 31.347A1.37 1.37 0 0 0 87.189 30.052L87.064 30.058A1.37 1.37 0 0 0 85.768 31.496L86.023 36.367 83.168 39.537 81.57 35.581 83.476 31.092A1.37 1.37 0 0 0 82.75 29.297L82.635 29.248A1.37 1.37 0 0 0 80.84 29.973L80.053 31.827 79.297 29.956A1.37 1.37 0 0 0 77.515 29.2L77.4 29.247H77.399L77.319 29.28A1.37 1.37 0 0 0 76.562 31.062L77.302 32.894 75.562 32.155A1.37 1.37 0 0 0 73.767 32.88L73.718 32.995C73.422 33.691 73.747 34.495 74.443 34.789L78.932 36.695 80.362 40.234 76.318 39.521 73.521 35.526A1.37 1.37 0 0 0 71.614 35.19L71.511 35.262A1.37 1.37 0 0 0 71.175 37.168L72.33 38.818 70.343 38.467A1.37 1.37 0 0 0 68.757 39.577L68.735 39.7V39.701L68.719 39.786A1.37 1.37 0 0 0 69.83 41.371L71.775 41.714 70.225 42.799A1.37 1.37 0 0 0 69.889 44.705L69.96 44.808C70.394 45.427 71.247 45.578 71.866 45.144L75.862 42.347 79.981 43.074 77.274 46.079 72.404 46.334A1.37 1.37 0 0 0 71.108 47.772L71.115 47.897C71.155 48.652 71.799 49.232 72.553 49.192L74.442 49.093 73.12 50.561A1.37 1.37 0 0 0 73.222 52.494L73.316 52.578C73.877 53.084 74.743 53.038 75.249 52.476L76.658 50.912 76.769 53.046A1.37 1.37 0 0 0 78.207 54.342L78.332 54.334A1.37 1.37 0 0 0 79.628 52.896L79.372 48.025 82.227 44.854 83.826 48.811 81.921 53.301A1.37 1.37 0 0 0 82.646 55.096L82.761 55.145C83.456 55.44 84.261 55.116 84.556 54.419L85.391 52.451 86.179 54.403C86.462 55.103 87.261 55.443 87.962 55.16L88.077 55.113A1.37 1.37 0 0 0 88.833 53.331L88.093 51.499 89.835 52.238A1.37 1.37 0 0 0 91.63 51.513L91.679 51.398A1.37 1.37 0 0 0 90.953 49.603L86.464 47.697 84.948 43.947 88.733 44.614 91.531 48.609C91.965 49.228 92.818 49.379 93.437 48.945L93.54 48.873A1.37 1.37 0 0 0 93.876 46.966L92.65 45.215 94.723 45.581A1.37 1.37 0 0 0 96.309 44.471L96.33 44.348A1.363 1.363 0 0 0 95.223 42.765" fill="#ffffff" data-fill-palette-color="quaternary"></path></svg>
+// `;
+
+// // Set the innerHTML of the logo div to the SVG content
+// logoDiv.innerHTML = svgContent;
+
+
+// Function to get a short definition for weather description
+function getWeatherDefinition(title) {
+    switch (title.toLowerCase()) {
+        case 'clear':
+            return 'Clear sky means that there are no clouds in the sky, resulting in sunny weather with bright sunshine.';
+        case 'partly cloudy':
+            return 'Partly cloudy weather means that the sky is partly covered with clouds, resulting in a mixture of sun and clouds.';
+        case 'overcast':
+            return 'Overcast weather refers to a sky that is completely covered with clouds, resulting in a dull and gloomy appearance.';
+        case 'cloudy':
+            return 'Cloudy weather means that the sky is covered with clouds, resulting in limited sunshine and subdued lighting.';
+        case 'rain':
+            return 'Rainy weather refers to the presence of precipitation in the form of water droplets falling from the sky.';
+        case 'snow':
+            return 'Snowy weather refers to the presence of frozen precipitation in the form of ice crystals falling from the sky.';
+        case 'sunny':
+            return 'Sunny weather means that the sky is clear and bright, with abundant sunshine.';
+        case 'fog':
+            return 'Foggy weather refers to the presence of thick mist close to the ground, resulting in reduced visibility.';
+        case 'thunderstorm':
+            return 'Thunderstorm weather is characterized by thunder, lightning, heavy rain, and sometimes hail.';
+        case 'windy':
+            return 'Windy weather is characterized by strong winds blowing across the landscape.';
+        case 'haze':
+            return 'Hazy weather is characterized by the presence of fine dust, smoke, or other dry particles that obscure visibility.';
+        case 'smoke':
+            return 'Smokey weather refers to the presence of suspended particles and gases released from burning materials, often resulting in reduced air quality.';
+        case 'dust':
+            return 'Dusty weather refers to the presence of suspended particles of sand or fine soil carried by strong winds.';
+        case 'tornado':
+            return 'Tornado weather is characterized by a violent rotating column of air extending from a thunderstorm to the ground.';
+        case 'sandstorm':
+            return 'Sandstorm weather refers to the presence of strong winds carrying sand particles, resulting in reduced visibility and potential damage.';
+        case 'hail':
+            return 'Hail weather refers to the presence of small balls or lumps of ice falling from the sky during a thunderstorm.';
+        case 'blizzard':
+            return 'Blizzard weather is characterized by strong winds, low temperatures, and heavy snowfall, resulting in reduced visibility and dangerous travel conditions.';
+        case 'drizzle':
+            return 'Drizzle weather refers to light rain falling in very fine droplets.';
+        case 'sleet':
+            return 'Sleet weather refers to a mixture of rain and snow falling from the sky.';
+        case 'freezing rain':
+            return 'Freezing rain weather refers to rain that freezes upon contact with surfaces, creating hazardous conditions.';
+        case 'icy':
+            return 'Icy weather refers to conditions where surfaces are covered with a layer of ice, making them slippery and dangerous.';
+        case 'squall':
+            return 'Squall weather refers to sudden, sharp increases in wind speed accompanied by rain or snow.';
+        case 'tropical storm':
+            return 'Tropical storm weather refers to a localized, very intense low-pressure wind system, forming over tropical oceans and with winds of hurricane force.';
+        case 'ash':
+            return 'Ash weather refers to the presence of particles of pulverized rock, minerals, and volcanic glass created during volcanic eruptions, often causing respiratory issues and reducing visibility.';
+        case 'volcanic eruption':
+            return 'Volcanic eruption weather refers to atmospheric conditions during a volcanic eruption, characterized by the release of gases, ash, and volcanic materials.';
+        case 'rainbow':
+            return 'Rainbow weather refers to the appearance of a spectrum of light in the sky, caused by the refraction and dispersion of sunlight.';
+        case 'meteor shower':
+            return 'Meteor shower weather refers to the occurrence of numerous meteors visible in the sky, typically during specific periods of the year when the Earth passes through a trail of debris left by a comet or asteroid.';
+        case 'patchy light rain with thunder':
+            return 'Patchy light rain with thunder refers to the occurrence of light rain accompanied by thunder, resulting in scattered thunderstorms with minimal rainfall.';
+        case 'light sleet':
+            return 'Light sleet weather refers to a mixture of light rain and snow falling from the sky. Light sleet typically occurs when there is a mixture of rain and snow, with the snowflakes partially melting before reaching the ground. This weather condition is characterized by light precipitation that may create a thin layer of ice on surfaces, including roads and sidewalks';
+        // Add more cases for other color names as needed
+        default:
+            return 'Weather conditions vary. Please check the detailed forecast for more information.';
+    }
+}

@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-content {
+    width: 100%;
+    margin: 0;
+    padding: 100px;
+    box-sizing: border-box; /* This ensures padding and border are included in the element's total width */
+    background-color: #fff;
+}
+
+.about {
+    color: #000; /* Text color */
+    width: 60%;
+    margin: 10% 0px 0px 15%;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about ul li {
+    margin-bottom: 20px;
+}
+
+.about ul li strong {
+    font-weight: bold;
+}
+
+.about ul li p {
+    margin-top: 5px;
+}
+
+.about .team-members, .about .project-info {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.about .team-members h3, .about .project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about .team-members ul, .about .project-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about .team-members ul li, .about .project-info ul li {
+    margin-bottom: 10px;
+}
+
+.about .team-members ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about .team-members ul li a:hover {
+    color: #ccc;
+}
+
+.about .project-info ul li {
+    margin-bottom: 10px;
+}
+
+.about .project-info ul li strong {
+    font-weight: bold;
+}
+
+.about .project-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about .project-info ul li a:hover {
+    color: #ccc;
+}
+
+.blog {
+    margin: 10% 0px 0px 15%;
+    width: 60%;
+}

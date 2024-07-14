@@ -1,0 +1,432 @@
+.logo-container {
+  position: absolute;
+  display: inline-block;
+  top: 25px;
+  left: 20px;
+}
+
+.outer-box {
+  width: 102px;
+  height: 38px;
+  border: 1.5px solid #fff;
+  border-right: none;
+  border-top: none;
+  border-radius: 4px;
+}
+
+.outer-box::before {
+  content: "";
+  position: absolute;
+  bottom: 96.9px;
+  right: 23%;
+  width: 78px;
+  height: 1px;
+  border-top: 1.5px solid #fff;
+  border-top-left-radius: 5px;
+}
+
+.outer-box::after {
+  content: "";
+  position: absolute;
+  top: 21%;
+  right: -0.5px; /* Adjust this value to control the size of the opening */
+  width: 0px;
+  height: 17px;
+  border-right: 1.5px solid #fff;
+  border-bottom-right-radius: 5px;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  justify-content: center;
+  top: -21%;
+  left: 78%;
+}
+
+#logo {
+  position: relative;
+  margin: 4px;
+  
+}
+
+.logoname {
+  position: relative;
+  display: inline-block;
+  top: -59.3px;
+  left: 8px;
+}
+
+.sphere {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  top: 16px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: inherit;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 60px; /* Set height to 60px */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+  border-bottom: 1.5px solid rgba(239, 232, 232, 0.3); /* Gray border bottom */
+  padding-top: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: -5%;
+  z-index: 1000; /* Ensure the navbar sits above other elements */
+}
+
+.navbar label {
+    margin-right: 10px;
+}
+
+.navbar input[type="text"],
+.navbar input[type="text"]:focus {
+    background-color: transparent !important;
+    color: #fff;
+    width: 40%;
+    padding: 5px;
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #fff; /* Add bottom border */
+    margin-left: 17.2%;
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Placeholder text font size */
+    
+}
+
+.navbar input[type="text"]::placeholder {
+    color: #ccc; /* Placeholder text color */
+}
+
+/* Prevent input background from changing to white */
+.navbar input[type="text"]:-webkit-autofill,
+.navbar input[type="text"]:-webkit-autofill:focus {
+    align-items: center;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important; /* Set text color to white */
+}
+
+
+
+.navbar button {
+    position: absolute; /* Position the button relative to the navbar container */
+    right: 40.6%; /* Align the button to the right */
+    transform: translateY(-10%); /* Adjust vertical position */
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Increase the size of the button icon */
+.navbar button .material-symbols-outlined {
+    font-size: 25px !important; /* Adjust the font size as needed */
+    font-weight: 100;
+}
+
+.toggle {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+}
+
+.temperature-toggle {
+  position: relative;
+  left: 5%;
+  text-align: center;
+  background-color: rgba(239, 232, 232, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.moreNavigation {
+  display: none;
+}
+
+.conversion-options {
+    position: fixed;
+    width: 84px;
+    left: 63%;
+    top: 9.45%;
+    background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: 20;
+     z-index: 1000; /* Ensure the navbar sits above other elements */
+}
+
+
+.temperature-toggle span, .conversion-options span, .toggle span, .toggle p {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  padding: 6px 0px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.togglebox {
+  position: relative;
+  text-align: center;
+  background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+  border-radius: 5px;
+  left: 120px;
+}
+
+.toggle p {
+  position: relative;
+  left: 90px;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 50%; /* To make it round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 160px;
+  cursor: pointer;
+}
+
+.profile span {
+  position: absolute;
+  font-size: 40px; /* Adjust the size as needed */
+  font-weight: 250;
+  margin: 0;
+}
+
+.locationname {
+  position: absolute;
+  display: inline-block;
+  align-items: center; /* Align items vertically */
+  margin: -80px 0px 0 -20px;
+}
+
+.toggletwo {
+    position: absolute;
+    display: inline-block;
+    align-items: center; /* Align items vertically */
+    background-color: rgba(239, 232, 232, 0.5); /* Dark hue with transparency */
+    border-radius: 5px;
+    margin: 20px 0px 0 -20px;
+}
+
+
+.toggletwo span {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.temperature-toggle span,
+.conversion-options span,
+.toggle span,
+.toggletwo span {
+    cursor: pointer;
+}
+
+.temperature-toggle span::after, .conversion-options span::after,  .active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2.95px; /* Adjust the position as needed */
+    width: 1.5px;
+    height: 70%;
+    background-color: #ccc;
+    transform: translateY(-50%);
+}
+
+.temperature-toggle:hover {
+  display: block;
+}
+
+.temperature-toggle span:last-child::after, .conversion-options span:last-child::after, .toggletwo span:last-child::after, .toggle span:last-child::after {
+    display: none; /* Hide the line after the last span */
+}
+
+.temperature-toggle span:hover, .conversion-options span:hover, .toggletwo span:hover, .toggle span:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Highlight hovered option */
+  border-radius: 5px;
+}
+
+
+/* Set styles for the entire footer */
+footer {
+    display: block; 
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    border-top: 1.5px solid #ccc; /* Gray border bottom */
+    padding-top: 30px;
+    font-size: 1rem;
+    color: #fff;
+    width: 100%;
+    border-top: 1.5px solid #ccc;
+  }
+
+  .footermain {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #accountinfo {
+    position: absolute;
+    margin-top: 40px;
+  }
+
+  .footeraccount {
+    position: relative;
+    width: 30%;
+    height:  300px;
+    background-color: rgba(239, 232, 232, 0.5);
+    right: 12.5%;
+    padding: 50px 10px;
+    border: 1px solid #c0b9b9;
+    border-top: none;
+    border-bottom: none;
+  }  
+  
+  .footeraccount a {
+    color: #fff; /* Set link color to white */
+    padding-left: 10px;
+  }
+  
+  .footerlogin {
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .footerlogin h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .footerlogin input[type="email"] {
+    padding: 5px 10px;
+    width: 60%;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  .footerlogin button[type="submit"] {
+    background-color: rgba(159, 153, 153, 0.5);
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .footerlogin button[type="submit"]:hover {
+    background-color: rgba(204, 198, 198, 0.5);
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .social-networks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-networks li {
+    margin: 0 10px;
+  }
+  
+  .social-networks li a {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+  @keyframes social-networkslia-hover {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 2px;
+    }
+  }
+  
+  .social-networks li a:hover {
+    animation: social-networkslia-hover 0.1s ease-out forwards;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .bloglink a {
+    color: #3a3939;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .bloglink a:hover {
+    color: #555;
+  }
+  
+  .cuservice {
+    position: relative;
+    left: 10%;
+    margin-top: 20px;
+  }
+  
+  .cosupport {
+    position: relative;
+    /* left: 0.2; */
+    margin-top: 20px;
+    
+  }
+  
+  .footermain a, .footertxt a {
+    color: #fff; /* Set link color to white */
+    text-decoration: none;
+  }
+  
+  .footermain a:hover , .footertxt a:hover {
+    text-decoration: underline;
+    color:rgb(182, 187, 196);
+  }
+  
+  .footeritemone, .copywrite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
