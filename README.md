@@ -15,7 +15,7 @@ WeatherSphere is a comprehensive weather application that provides real-time wea
 
 ## Installation
 1. Clone the repository:
-git clone https://github.com/osnxcn/weatherApp.git
+git clone https://github.com/osunxn/weatherApp.git
 
 markdown
 Copy code
