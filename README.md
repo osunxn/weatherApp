@@ -26,7 +26,7 @@ Copy code
 - Toggle between Celsius and Fahrenheit temperature units using the temperature toggle.
 
 ## Contributors
-- [osnxcn](https://github.com/osnxcn)
+- [osunxn](https://github.com/osnxcn)
 
 ## License
 This project is licensed under the [FREE](LICENSE).
