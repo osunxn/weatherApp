@@ -22,7 +22,7 @@ Copy code
 2. Open the `index.html` file in your web browser.
 
 ## Usage
-- Enter the name of a city in the search bar and click the "Get Weather" button to retrieve weather information for that location.
+- Enter the name of a city in the search bar and click the "Search or Press Enter" button to retrieve weather information for that location.
 - Toggle between Celsius and Fahrenheit temperature units using the temperature toggle.
 
 ## Contributors
